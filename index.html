@@ -70,24 +70,13 @@
       color: #0078d7;
       margin-top: 25px;
     }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 20px 0;
-    }
-    table th, table td {
-      border: 1px solid #ddd;
-      padding: 12px;
-      text-align: left;
-    }
-    table th {
-      background-color: #0078d7;
-      color: #fff;
-    }
-    ul {
-      list-style: disc inside;
-      margin: 10px 0 20px 0;
-      padding: 0;
+    p.comment {
+      background: #fff;
+      padding: 14px 18px;
+      border-left: 4px solid #0078d7;
+      border-radius: 6px;
+      margin-bottom: 16px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
     }
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(10px); }
@@ -149,16 +138,26 @@
 
   <section class="comments">
     <h2>Modular Comment Bank</h2>
+
     <h3>Instruction Following</h3>
-    <ul><li>“Edit matches the prompt precisely.”</li><li>“Requested action is incomplete or misaligned.”</li></ul>
+    <p class="comment">The edit successfully matches the prompt, demonstrating clear alignment with the requested action and leaving no ambiguity in execution.</p>
+    <p class="comment">In some cases, the requested action is incomplete or misaligned, which reduces the effectiveness of the edit and weakens its adherence to instructions.</p>
+
     <h3>Motion Quality</h3>
-    <ul><li>“Movement appears fluid and anatomically consistent.”</li><li>“Frame transition shows jitter; recommend smoothing.”</li></ul>
+    <p class="comment">Movement appears fluid and anatomically consistent, creating a natural and believable flow that enhances viewer engagement.</p>
+    <p class="comment">Frame transitions occasionally show jitter or abruptness; smoothing these transitions would improve realism and overall motion quality.</p>
+
     <h3>Audio Quality</h3>
-    <ul><li>“Dialogue syncs well with lip movement.”</li><li>“Background noise reduces clarity.”</li></ul>
+    <p class="comment">Dialogue syncs well with lip movement, ensuring clarity and maintaining immersion for the audience.</p>
+    <p class="comment">Background noise or distortion reduces clarity, making it harder to follow the intended audio cues and diminishing technical quality.</p>
+
     <h3>Compositional Integrity</h3>
-    <ul><li>“Framing is balanced and visually coherent.”</li><li>“Subject is cropped awkwardly; adjust positioning.”</li></ul>
+    <p class="comment">Framing is balanced and visually coherent, with subjects positioned effectively to maintain continuity and aesthetic appeal.</p>
+    <p class="comment">The subject is cropped awkwardly or misaligned, which disrupts visual balance and requires adjustment for better composition.</p>
+
     <h3>Overall Best</h3>
-    <ul><li>“Video follows instructions and maintains technical quality.”</li><li>“Despite prompt alignment, defects prevent selection.”</li></ul>
+    <p class="comment">The video follows instructions closely while maintaining strong technical quality, making it the preferred choice for presentation.</p>
+    <p class="comment">Although the prompt is aligned, significant defects prevent the video from being selected as the best option.</p>
   </section>
 
   <section class="case-studies">
@@ -171,7 +170,187 @@
       <li><strong>Justifications</strong>: 1–2 sentences per criterion.</li>
       <li><strong>Overall Best Selection</strong>: With rationale.</li>
     </ul>
+Thanks for catching that — let me give you the **fully complete HTML code** with the improved *Modular Comment Bank* section and all closing tags properly included. You can copy-paste this directly into your `index.html` file:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Video Evaluation Portfolio</title>
+  <style>
+    body {
+      font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: #f9f9fb;
+      color: #333;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: linear-gradient(135deg, #0078d7, #00b4d8);
+      color: white;
+      padding: 30px;
+      text-align: center;
+      border-radius: 0 0 12px 12px;
+    }
+    header a {
+      color: #ffeb3b;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    section {
+      padding: 40px;
+      margin: 20px auto;
+      max-width: 900px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: fadeIn 0.6s ease forwards;
+    }
+    section:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+    }
+    section.overview { background: linear-gradient(135deg, #e0f7fa, #ffffff); }
+    section.purpose { background: linear-gradient(135deg, #f1f8e9, #ffffff); }
+    section.methodology { background: linear-gradient(135deg, #fff3e0, #ffffff); }
+    section.rubric { background: linear-gradient(135deg, #ede7f6, #ffffff); }
+    section.comments { background: linear-gradient(135deg, #fce4ec, #ffffff); }
+    section.case-studies { background: linear-gradient(135deg, #e8f5e9, #ffffff); }
+
+    h1, h2, h3 {
+      font-weight: 700;
+      margin-top: 0;
+      color: #222;
+    }
+    h2 {
+      font-size: 1.8em;
+      position: relative;
+      padding-bottom: 8px;
+      margin-bottom: 20px;
+    }
+    h2::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 60px;
+      height: 4px;
+      background: linear-gradient(90deg, #0078d7, #00b4d8);
+      border-radius: 2px;
+    }
+    h3 {
+      font-size: 1.3em;
+      color: #0078d7;
+      margin-top: 25px;
+    }
+    p.comment {
+      background: #fff;
+      padding: 14px 18px;
+      border-left: 4px solid #0078d7;
+      border-radius: 6px;
+      margin-bottom: 16px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>BEN WAFULA</h1>
+    <p><strong>LinkedIn:</strong> 
+      <a href="https://www.linkedin.com/in/ben-wafula-2898ab2a5" target="_blank">
+        www.linkedin.com/in/ben-wafula-2898ab2a5
+      </a>
+    </p>
+    <p><strong>Email:</strong> 
+      <a href="mailto:wafulaben2021@gmail.com">
+        wafulaben2021@gmail.com
+      </a>
+    </p>
+  </header>
+
+  <section class="overview">
+    <h2>Overview</h2>
+    <p>This portfolio showcases a structured, rubric-driven approach to <strong>video evaluation and quality assurance</strong>. It demonstrates operational excellence, efficiency, and consistency across diverse evaluation scenarios. Each entry highlights how modular comment banks and objective rubrics streamline the review process, ensuring evaluations are both precise and reusable.</p>
   </section>
+
+  <section class="purpose">
+    <h2>Purpose</h2>
+    <ul>
+      <li>Provide a <strong>professional framework</strong> for evaluating video edits against prompts.</li>
+      <li>Document <strong>methodology and workflows</strong> that reduce subjectivity and maximize efficiency.</li>
+      <li>Showcase <strong>case studies</strong> that illustrate practical application of rubrics and modular comments.</li>
+    </ul>
+  </section>
+
+  <section class="methodology">
+    <h2>Methodology</h2>
+    <ul>
+      <li><strong>Instruction Following</strong>: Assess whether edits align with the given prompt.</li>
+      <li><strong>Technical Quality</strong>: Evaluate motion smoothness, audio sync, and compositional balance.</li>
+      <li><strong>Independent Scoring</strong>: Each criterion judged separately to maintain objectivity.</li>
+      <li><strong>Overall Preference</strong>: Select the video that best combines instruction adherence and technical quality, excluding outputs with egregious errors.</li>
+    </ul>
+  </section>
+
+  <section class="rubric">
+    <h2>Rubric Framework</h2>
+    <table>
+      <tr><th>Criterion</th><th>Description</th><th>Scale</th><th>Notes</th></tr>
+      <tr><td>Instruction Following</td><td>Accuracy of edit vs. prompt</td><td>1–5</td><td>Clear alignment with request</td></tr>
+      <tr><td>Motion Quality</td><td>Smoothness, realism, anatomical correctness</td><td>1–5</td><td>Spot jitter, unnatural transitions</td></tr>
+      <tr><td>Audio Quality</td><td>Sync, clarity, distortion</td><td>1–5</td><td>Dialogue vs. lip movement</td></tr>
+      <tr><td>Compositional Integrity</td><td>Balance, framing, continuity</td><td>1–5</td><td>Avoid cut-off or misaligned edits</td></tr>
+      <tr><td>Overall Best</td><td>Preferred video to share</td><td>Single choice</td><td>Exclude egregious errors</td></tr>
+    </table>
+  </section>
+
+  <section class="comments">
+    <h2>Modular Comment Bank</h2>
+
+    <h3>Instruction Following</h3>
+    <p class="comment">The edit successfully matches the prompt, demonstrating clear alignment with the requested action and leaving no ambiguity in execution.</p>
+    <p class="comment">In some cases, the requested action is incomplete or misaligned, which reduces the effectiveness of the edit and weakens its adherence to instructions.</p>
+
+    <h3>Motion Quality</h3>
+    <p class="comment">Movement appears fluid and anatomically consistent, creating a natural and believable flow that enhances viewer engagement.</p>
+    <p class="comment">Frame transitions occasionally show jitter or abruptness; smoothing these transitions would improve realism and overall motion quality.</p>
+
+    <h3>Audio Quality</h3>
+    <p class="comment">Dialogue syncs well with lip movement, ensuring clarity and maintaining immersion for the audience.</p>
+    <p class="comment">Background noise or distortion reduces clarity, making it harder to follow the intended audio cues and diminishing technical quality.</p>
+
+    <h3>Compositional Integrity</h3>
+    <p class="comment">Framing is balanced and visually coherent, with subjects positioned effectively to maintain continuity and aesthetic appeal.</p>
+    <p class="comment">The subject is cropped awkwardly or misaligned, which disrupts visual balance and requires adjustment for better composition.</p>
+
+    <h3>Overall Best</h3>
+    <p class="comment">The video follows instructions closely while maintaining strong technical quality, making it the preferred choice for presentation.</p>
+    <p class="comment">Although the prompt is aligned, significant defects prevent the video from being selected as the best option.</p>
+  </section>
+
+  <section class="case-studies">
+    <h2>Case Study Entries</h2>
+    <p>Each evaluation entry includes:</p>
+    <ul>
+      <li><strong>Prompt</strong>: e.g., “Make the character wave.”</li>
+      <li><strong>Video Pair</strong>: Original + two edits.</li>
+      <li><strong>Rubric Scores</strong>: Table with 1–5 ratings.</li>
+      <li><strong>Justifications</strong>: 1–2 sentences per criterion.</li>
+      <li><strong>Overall Best Selection</strong>: With rationale.</li>
+      <li><strong>Overall Best Selection</strong>: With rationale.</li>
+    </ul>
+  </section>
+
+  <footer style="text-align:center; padding:20px; background:#0078d7; color:white; border-radius:12px 12px 0 0;">
+    <p>&copy; 2026 BEN WAFULA | Video Evaluation Portfolio</p>
+  </footer>
 
 </body>
 </html>
