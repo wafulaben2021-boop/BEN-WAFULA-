@@ -15,14 +15,32 @@
     header {
       background: linear-gradient(135deg, #0078d7, #00b4d8);
       color: white;
-      padding: 30px;
+      padding: 20px;
       text-align: center;
       border-radius: 0 0 12px 12px;
+    }
+    header h1 {
+      margin: 0;
     }
     header a {
       color: #ffeb3b;
       text-decoration: none;
       font-weight: bold;
+    }
+    nav {
+      background: #005a9e;
+      padding: 12px;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #ffeb3b;
     }
     section {
       padding: 40px;
@@ -70,13 +88,34 @@
       color: #0078d7;
       margin-top: 25px;
     }
-    p.comment {
+    .comment-card {
       background: #fff;
-      padding: 14px 18px;
-      border-left: 4px solid #0078d7;
-      border-radius: 6px;
-      margin-bottom: 16px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 24px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .comment-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 14px rgba(0,0,0,0.1);
+    }
+    .comment-card h3 {
+      margin-top: 0;
+      margin-bottom: 12px;
+      color: #0078d7;
+      font-size: 1.2em;
+    }
+    .comment-card p {
+      margin: 8px 0;
+      line-height: 1.5;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #0078d7;
+      color: white;
+      border-radius: 12px 12px 0 0;
     }
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(10px); }
@@ -100,12 +139,21 @@
     </p>
   </header>
 
-  <section class="overview">
+  <nav>
+    <a href="#overview">Overview</a>
+    <a href="#purpose">Purpose</a>
+    <a href="#methodology">Methodology</a>
+    <a href="#rubric">Rubric</a>
+    <a href="#comments">Comment Bank</a>
+    <a href="#case-studies">Case Studies</a>
+  </nav>
+
+  <section id="overview" class="overview">
     <h2>Overview</h2>
     <p>This portfolio showcases a structured, rubric-driven approach to <strong>video evaluation and quality assurance</strong>. It demonstrates operational excellence, efficiency, and consistency across diverse evaluation scenarios. Each entry highlights how modular comment banks and objective rubrics streamline the review process, ensuring evaluations are both precise and reusable.</p>
   </section>
 
-  <section class="purpose">
+  <section id="purpose" class="purpose">
     <h2>Purpose</h2>
     <ul>
       <li>Provide a <strong>professional framework</strong> for evaluating video edits against prompts.</li>
@@ -114,7 +162,7 @@
     </ul>
   </section>
 
-  <section class="methodology">
+  <section id="methodology" class="methodology">
     <h2>Methodology</h2>
     <ul>
       <li><strong>Instruction Following</strong>: Assess whether edits align with the given prompt.</li>
@@ -124,7 +172,7 @@
     </ul>
   </section>
 
-  <section class="rubric">
+  <section id="rubric" class="rubric">
     <h2>Rubric Framework</h2>
     <table>
       <tr><th>Criterion</th><th>Description</th><th>Scale</th><th>Notes</th></tr>
@@ -136,41 +184,18 @@
     </table>
   </section>
 
-  <section class="comments">
+  <section id="comments" class="comments">
     <h2>Modular Comment Bank</h2>
 
-    <h3>Instruction Following</h3>
-    <p class="comment">The edit successfully matches the prompt, demonstrating clear alignment with the requested action and leaving no ambiguity in execution.</p>
-    <p class="comment">In some cases, the requested action is incomplete or misaligned, which reduces the effectiveness of the edit and weakens its adherence to instructions.</p>
+    <div class="comment-card">
+      <h3>📋 Instruction Following</h3>
+      <p>The edit successfully matches the prompt, demonstrating clear alignment with the requested action and leaving no ambiguity in execution.</p>
+      <p>In some cases, the requested action is incomplete or misaligned, which reduces the effectiveness of the edit and weakens its adherence to instructions.</p>
+    </div>
 
-    <h3>Motion Quality</h3>
-    <p class="comment">Movement appears fluid and anatomically consistent, creating a natural and believable flow that enhances viewer engagement.</p>
-    <p class="comment">Frame transitions occasionally show jitter or abruptness; smoothing these transitions would improve realism and overall motion quality.</p>
-
-    <h3>Audio Quality</h3>
-    <p class="comment">Dialogue syncs well with lip movement, ensuring clarity and maintaining immersion for the audience.</p>
-    <p class="comment">Background noise or distortion reduces clarity, making it harder to follow the intended audio cues and diminishing technical quality.</p>
-
-    <h3>Compositional Integrity</h3>
-    <p class="comment">Framing is balanced and visually coherent, with subjects positioned effectively to maintain continuity and aesthetic appeal.</p>
-    <p class="comment">The subject is cropped awkwardly or misaligned, which disrupts visual balance and requires adjustment for better composition.</p>
-
-    <h3>Overall Best</h3>
-    <p class="comment">The video follows instructions closely while maintaining strong technical quality, making it the preferred choice for presentation.</p>
-    <p class="comment">Although the prompt is aligned, significant defects prevent the video from being selected as the best option.</p>
-  </section>
-
-  <section class="case-studies">
-    <h2>Case Study Entries</h2>
-    <p>Each evaluation entry includes:</p>
-    <ul>
-      <li><strong>Prompt</strong>: e.g., “Make the character wave.”</li>
-      <li><strong>Video Pair</strong>: Original + two edits.</li>
-      <li><strong>Rubric Scores</strong>: Table with 1–5 ratings.</li>
-      <li><strong>Justifications</strong>: 1–2 sentences per criterion.</li>
-      <li><strong>Overall Best Selection</strong>: With rationale.</li>
-    </ul>
-Thanks for catching that — let me give you the **fully complete HTML code** with the improved *Modular Comment Bank* section and all closing tags properly included. You can copy-paste this directly into your `index.html` file:
+    <div class="comment-card">
+      <h3>🎥 Motion Quality</h3>
+      <p>Movement appears fluid and anatomically consistent, creating a natural and believable flow that enhances viewerHere’s the **fully complete and polished `index.html` code** with the navigation bar, improved card design for the *Modular Comment Bank*, and all closing tags properly included. This version is ready to copy-paste into your GitHub Pages project:
 
 ```html
 <!DOCTYPE html>
@@ -190,14 +215,32 @@ Thanks for catching that — let me give you the **fully complete HTML code** wi
     header {
       background: linear-gradient(135deg, #0078d7, #00b4d8);
       color: white;
-      padding: 30px;
+      padding: 20px;
       text-align: center;
       border-radius: 0 0 12px 12px;
+    }
+    header h1 {
+      margin: 0;
     }
     header a {
       color: #ffeb3b;
       text-decoration: none;
       font-weight: bold;
+    }
+    nav {
+      background: #005a9e;
+      padding: 12px;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #ffeb3b;
     }
     section {
       padding: 40px;
@@ -245,13 +288,34 @@ Thanks for catching that — let me give you the **fully complete HTML code** wi
       color: #0078d7;
       margin-top: 25px;
     }
-    p.comment {
+    .comment-card {
       background: #fff;
-      padding: 14px 18px;
-      border-left: 4px solid #0078d7;
-      border-radius: 6px;
-      margin-bottom: 16px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 24px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .comment-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 14px rgba(0,0,0,0.1);
+    }
+    .comment-card h3 {
+      margin-top: 0;
+      margin-bottom: 12px;
+      color: #0078d7;
+      font-size: 1.2em;
+    }
+    .comment-card p {
+      margin: 8px 0;
+      line-height: 1.5;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #0078d7;
+      color: white;
+      border-radius: 12px 12px 0 0;
     }
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(10px); }
@@ -275,12 +339,21 @@ Thanks for catching that — let me give you the **fully complete HTML code** wi
     </p>
   </header>
 
-  <section class="overview">
+  <nav>
+    <a href="#overview">Overview</a>
+    <a href="#purpose">Purpose</a>
+    <a href="#methodology">Methodology</a>
+    <a href="#rubric">Rubric</a>
+    <a href="#comments">Comment Bank</a>
+    <a href="#case-studies">Case Studies</a>
+  </nav>
+
+  <section id="overview" class="overview">
     <h2>Overview</h2>
     <p>This portfolio showcases a structured, rubric-driven approach to <strong>video evaluation and quality assurance</strong>. It demonstrates operational excellence, efficiency, and consistency across diverse evaluation scenarios. Each entry highlights how modular comment banks and objective rubrics streamline the review process, ensuring evaluations are both precise and reusable.</p>
   </section>
 
-  <section class="purpose">
+  <section id="purpose" class="purpose">
     <h2>Purpose</h2>
     <ul>
       <li>Provide a <strong>professional framework</strong> for evaluating video edits against prompts.</li>
@@ -289,7 +362,7 @@ Thanks for catching that — let me give you the **fully complete HTML code** wi
     </ul>
   </section>
 
-  <section class="methodology">
+  <section id="methodology" class="methodology">
     <h2>Methodology</h2>
     <ul>
       <li><strong>Instruction Following</strong>: Assess whether edits align with the given prompt.</li>
@@ -299,7 +372,7 @@ Thanks for catching that — let me give you the **fully complete HTML code** wi
     </ul>
   </section>
 
-  <section class="rubric">
+  <section id="rubric" class="rubric">
     <h2>Rubric Framework</h2>
     <table>
       <tr><th>Criterion</th><th>Description</th><th>Scale</th><th>Notes</th></tr>
@@ -311,31 +384,40 @@ Thanks for catching that — let me give you the **fully complete HTML code** wi
     </table>
   </section>
 
-  <section class="comments">
+  <section id="comments" class="comments">
     <h2>Modular Comment Bank</h2>
 
-    <h3>Instruction Following</h3>
-    <p class="comment">The edit successfully matches the prompt, demonstrating clear alignment with the requested action and leaving no ambiguity in execution.</p>
-    <p class="comment">In some cases, the requested action is incomplete or misaligned, which reduces the effectiveness of the edit and weakens its adherence to instructions.</p>
+    <div class="comment-card">
+      <h3>📋 Instruction Following</h3>
+      <p>The edit successfully matches the prompt, demonstrating clear alignment with the requested action and leaving no ambiguity in execution.</p>
+      <p>In some cases, the requested action is incomplete or misaligned, which reduces the effectiveness of the edit and weakens its adherence to instructions.</p>
+    </div>
 
-    <h3>Motion Quality</h3>
-    <p class="comment">Movement appears fluid and anatomically consistent, creating a natural and believable flow that enhances viewer engagement.</p>
-    <p class="comment">Frame transitions occasionally show jitter or abruptness; smoothing these transitions would improve realism and overall motion quality.</p>
+    <div class="comment-card">
+      <h3>🎥 Motion Quality</h3>
+      <p>Movement appears fluid and anatomically consistent, creating a natural and believable flow      <p>Frame transitions occasionally show jitter or abruptness; smoothing these transitions would improve realism and overall motion quality.</p>
+    </div>
 
-    <h3>Audio Quality</h3>
-    <p class="comment">Dialogue syncs well with lip movement, ensuring clarity and maintaining immersion for the audience.</p>
-    <p class="comment">Background noise or distortion reduces clarity, making it harder to follow the intended audio cues and diminishing technical quality.</p>
+    <div class="comment-card">
+      <h3>🔊 Audio Quality</h3>
+      <p>Dialogue syncs well with lip movement, ensuring clarity and maintaining immersion for the audience.</p>
+      <p>Background noise or distortion reduces clarity, making it harder to follow the intended audio cues and diminishing technical quality.</p>
+    </div>
 
-    <h3>Compositional Integrity</h3>
-    <p class="comment">Framing is balanced and visually coherent, with subjects positioned effectively to maintain continuity and aesthetic appeal.</p>
-    <p class="comment">The subject is cropped awkwardly or misaligned, which disrupts visual balance and requires adjustment for better composition.</p>
+    <div class="comment-card">
+      <h3>🖼️ Compositional Integrity</h3>
+      <p>Framing is balanced and visually coherent, with subjects positioned effectively to maintain continuity and aesthetic appeal.</p>
+      <p>The subject is cropped awkwardly or misaligned, which disrupts visual balance and requires adjustment for better composition.</p>
+    </div>
 
-    <h3>Overall Best</h3>
-    <p class="comment">The video follows instructions closely while maintaining strong technical quality, making it the preferred choice for presentation.</p>
-    <p class="comment">Although the prompt is aligned, significant defects prevent the video from being selected as the best option.</p>
+    <div class="comment-card">
+      <h3>⭐ Overall Best</h3>
+      <p>The video follows instructions closely while maintaining strong technical quality, making it the preferred choice for presentation.</p>
+      <p>Although the prompt is aligned, significant defects prevent the video from being selected as the best option.</p>
+    </div>
   </section>
 
-  <section class="case-studies">
+  <section id="case-studies" class="case-studies">
     <h2>Case Study Entries</h2>
     <p>Each evaluation entry includes:</p>
     <ul>
@@ -344,11 +426,10 @@ Thanks for catching that — let me give you the **fully complete HTML code** wi
       <li><strong>Rubric Scores</strong>: Table with 1–5 ratings.</li>
       <li><strong>Justifications</strong>: 1–2 sentences per criterion.</li>
       <li><strong>Overall Best Selection</strong>: With rationale.</li>
-      <li><strong>Overall Best Selection</strong>: With rationale.</li>
     </ul>
   </section>
 
-  <footer style="text-align:center; padding:20px; background:#0078d7; color:white; border-radius:12px 12px 0 0;">
+  <footer>
     <p>&copy; 2026 BEN WAFULA | Video Evaluation Portfolio</p>
   </footer>
 
