@@ -21,14 +21,6 @@
       border-radius: 0 0 12px 12px;
     }
 
-    header h1 { margin: 0; }
-
-    header a {
-      color: #ffeb3b;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
     nav {
       background: #005a9e;
       padding: 12px;
@@ -40,10 +32,7 @@
       margin: 0 15px;
       text-decoration: none;
       font-weight: 600;
-      transition: color 0.3s ease;
     }
-
-    nav a:hover { color: #ffeb3b; }
 
     section {
       padding: 40px;
@@ -51,53 +40,12 @@
       max-width: 900px;
       border-radius: 12px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      animation: fadeIn 0.6s ease forwards;
-    }
-
-    section:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 6px 16px rgba(0,0,0,0.12);
-    }
-
-    section.overview { background: linear-gradient(135deg, #e0f7fa, #ffffff); }
-    section.purpose { background: linear-gradient(135deg, #f1f8e9, #ffffff); }
-    section.methodology { background: linear-gradient(135deg, #fff3e0, #ffffff); }
-    section.rubric { background: linear-gradient(135deg, #ede7f6, #ffffff); }
-    section.comments { background: linear-gradient(135deg, #fce4ec, #ffffff); }
-    section.case-studies { background: linear-gradient(135deg, #e8f5e9, #ffffff); }
-
-    h1, h2, h3 {
-      font-weight: 700;
-      margin-top: 0;
-      color: #222;
     }
 
     h2 {
-      font-size: 1.8em;
-      position: relative;
-      padding-bottom: 8px;
       margin-bottom: 20px;
     }
 
-    h2::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      width: 60px;
-      height: 4px;
-      background: linear-gradient(90deg, #0078d7, #00b4d8);
-      border-radius: 2px;
-    }
-
-    h3 {
-      font-size: 1.3em;
-      color: #0078d7;
-      margin-top: 25px;
-    }
-
-    /* UPDATED TABLE GRID */
     table {
       width: 100%;
       border-collapse: collapse;
@@ -107,7 +55,7 @@
 
     th, td {
       border: 1px solid #333;
-      padding: 12px;
+      padding: 10px;
       text-align: left;
     }
 
@@ -124,14 +72,11 @@
       background: #fff;
       border-radius: 10px;
       padding: 20px;
-      margin-bottom: 24px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.06);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      margin-bottom: 20px;
     }
 
-    .comment-card:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 6px 14px rgba(0,0,0,0.1);
+    iframe {
+      border-radius: 8px;
     }
 
     footer {
@@ -139,148 +84,132 @@
       padding: 20px;
       background: #0078d7;
       color: white;
-      border-radius: 12px 12px 0 0;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(10px); }
-      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
 
 <body>
 
-  <header>
-    <h1>BEN WAFULA</h1>
-    <p><strong>LinkedIn:</strong>
-      <a href="https://www.linkedin.com/in/ben-wafula-2898ab2a5" target="_blank">
-        www.linkedin.com/in/ben-wafula-2898ab2a5
-      </a>
-    </p>
-    <p><strong>Email:</strong>
-      <a href="mailto:wafulaben2021@gmail.com">wafulaben2021@gmail.com</a>
-    </p>
-  </header>
+<header>
+  <h1>BEN WAFULA</h1>
+  <p>
+    <a href="https://www.linkedin.com/in/ben-wafula-2898ab2a5" target="_blank">LinkedIn</a> |
+    <a href="mailto:wafulaben2021@gmail.com">Email</a>
+  </p>
+</header>
 
-  <nav>
-    <a href="#overview">Overview</a>
-    <a href="#purpose">Purpose</a>
-    <a href="#methodology">Methodology</a>
-    <a href="#rubric">Rubric</a>
-    <a href="#comments">Comment Bank</a>
-    <a href="#case-studies">Case Studies</a>
-  </nav>
+<nav>
+  <a href="#overview">Overview</a>
+  <a href="#methodology">Methodology</a>
+  <a href="#rubric">Rubric</a>
+  <a href="#comments">Comments</a>
+  <a href="#case-studies">Case Studies</a>
+</nav>
 
-  <section id="overview" class="overview">
-    <h2>Overview</h2>
-    <p>This portfolio shows a structured approach to video evaluation and quality assurance. It focuses on consistency, speed, and clear scoring using rubrics and reusable comments.</p>
-  </section>
+<section id="overview">
+  <h2>Overview</h2>
+  <p>This portfolio shows a structured approach to video evaluation using a clear scoring system.</p>
+</section>
 
-  <section id="purpose" class="purpose">
-    <h2>Purpose</h2>
-    <ul>
-      <li>Provide a clear framework for evaluating video edits</li>
-      <li>Reduce subjectivity through structured scoring</li>
-      <li>Show real evaluation examples</li>
-    </ul>
-  </section>
+<section id="methodology">
+  <h2>Methodology</h2>
+  <ul>
+    <li>Check instruction alignment</li>
+    <li>Evaluate motion, audio, and composition</li>
+    <li>Score each independently</li>
+    <li>Select best output</li>
+  </ul>
+</section>
 
-  <section id="methodology" class="methodology">
-    <h2>Methodology</h2>
-    <ul>
-      <li>Instruction Following. Check alignment with prompt</li>
-      <li>Technical Quality. Check motion, audio, composition</li>
-      <li>Independent Scoring. Score each criterion separately</li>
-      <li>Overall Selection. Choose best output without major errors</li>
-    </ul>
-  </section>
+<section id="rubric">
+  <h2>Rubric Framework</h2>
+  <table>
+    <tr>
+      <th>Criterion</th>
+      <th>Description</th>
+      <th>Scale</th>
+    </tr>
+    <tr>
+      <td>Instruction Following</td>
+      <td>Accuracy vs prompt</td>
+      <td>1–5</td>
+    </tr>
+    <tr>
+      <td>Motion Quality</td>
+      <td>Smoothness</td>
+      <td>1–5</td>
+    </tr>
+    <tr>
+      <td>Audio Quality</td>
+      <td>Sync and clarity</td>
+      <td>1–5</td>
+    </tr>
+    <tr>
+      <td>Composition</td>
+      <td>Framing</td>
+      <td>1–5</td>
+    </tr>
+    <tr>
+      <td>Overall</td>
+      <td>Best selection</td>
+      <td>Single</td>
+    </tr>
+  </table>
+</section>
 
-  <section id="rubric" class="rubric">
-    <h2>Rubric Framework</h2>
-    <table>
-      <tr>
-        <th>Criterion</th>
-        <th>Description</th>
-        <th>Scale</th>
-      </tr>
-      <tr>
-        <td>Instruction Following</td>
-        <td>Accuracy vs prompt</td>
-        <td>1–5</td>
-      </tr>
-      <tr>
-        <td>Motion Quality</td>
-        <td>Smoothness and realism</td>
-        <td>1–5</td>
-      </tr>
-      <tr>
-        <td>Audio Quality</td>
-        <td>Sync and clarity</td>
-        <td>1–5</td>
-      </tr>
-      <tr>
-        <td>Composition</td>
-        <td>Framing and balance</td>
-        <td>1–5</td>
-      </tr>
-      <tr>
-        <td>Overall Best</td>
-        <td>Final selection</td>
-        <td>Single</td>
-      </tr>
-    </table>
-  </section>
+<section id="comments">
+  <h2>Comment Bank</h2>
 
-  <section id="comments" class="comments">
-    <h2>Modular Comment Bank</h2>
+  <div class="comment-card">
+    <h3>Instruction</h3>
+    <p>Matches prompt</p>
+    <p>Misses prompt details</p>
+  </div>
 
-    <div class="comment-card">
-      <h3>Instruction Following</h3>
-      <p>The edit matches the prompt clearly.</p>
-      <p>The edit misses key parts of the prompt.</p>
-    </div>
+  <div class="comment-card">
+    <h3>Motion</h3>
+    <p>Smooth motion</p>
+    <p>Jitter present</p>
+  </div>
 
-    <div class="comment-card">
-      <h3>Motion Quality</h3>
-      <p>Motion looks smooth and natural.</p>
-      <p>Motion shows jitter or abrupt transitions.</p>
-    </div>
+</section>
 
-    <div class="comment-card">
-      <h3>Audio Quality</h3>
-      <p>Audio is clear and synced.</p>
-      <p>Audio has noise or sync issues.</p>
-    </div>
+<section id="case-studies">
+  <h2>Case Studies</h2>
 
-    <div class="comment-card">
-      <h3>Composition</h3>
-      <p>Framing looks balanced.</p>
-      <p>Framing looks cropped or misaligned.</p>
-    </div>
+  <p>These videos show the type of content evaluated using the rubric.</p>
 
-    <div class="comment-card">
-      <h3>Overall Best</h3>
-      <p>Best balance of quality and instruction match.</p>
-      <p>Has issues that affect final selection.</p>
-    </div>
+  <h3>Video 1</h3>
+  <iframe src="https://player.vimeo.com/video/1180209118" width="100%" height="400"></iframe>
 
-  </section>
+  <table>
+    <tr><th>Criterion</th><th>Score</th><th>Reason</th></tr>
+    <tr><td>Instruction</td><td>5</td><td>Clear alignment</td></tr>
+    <tr><td>Motion</td><td>4</td><td>Minor jitter</td></tr>
+    <tr><td>Audio</td><td>5</td><td>Clear sync</td></tr>
+    <tr><td>Composition</td><td>4</td><td>Slight framing issue</td></tr>
+  </table>
 
-  <section id="case-studies" class="case-studies">
-    <h2>Case Studies</h2>
-    <ul>
-      <li>Prompt</li>
-      <li>Video comparison</li>
-      <li>Scores</li>
-      <li>Justification</li>
-      <li>Final selection</li>
-    </ul>
-  </section>
+  <h3 style="margin-top:30px;">Video 2</h3>
+  <iframe src="https://player.vimeo.com/video/1180209105" width="100%" height="400"></iframe>
 
-  <footer>
-    <p>© 2026 BEN WAFULA</p>
-  </footer>
+  <table>
+    <tr><th>Criterion</th><th>Score</th><th>Reason</th></tr>
+    <tr><td>Instruction</td><td>3</td><td>Partial alignment</td></tr>
+    <tr><td>Motion</td><td>3</td><td>Visible jitter</td></tr>
+    <tr><td>Audio</td><td>4</td><td>Mostly clear</td></tr>
+    <tr><td>Composition</td><td>3</td><td>Framing off</td></tr>
+  </table>
+
+  <p style="margin-top:20px;">
+    Video 1 is selected as the better output based on higher consistency across all criteria.
+  </p>
+
+</section>
+
+<footer>
+  <p>© 2026 BEN WAFULA</p>
+</footer>
 
 </body>
 </html>
