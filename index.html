@@ -1,327 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Evaluation Portfolio</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hillary Kusumo Portfolio</title>
+<style>
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #121212;
+    color: #f5f5f5;
+  }
 
-    html {
-      scroll-behavior: smooth;
-    }
+  header, footer {
+    background-color: #2c2c2c;
+    text-align: center;
+    padding: 20px 0;
+    color: #e0e0e0;
+  }
 
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #f5f5f5 url('47381f8d-88ae-4374-b2a8-e75f38613398.png') no-repeat center top;
-      background-size: cover;
-      color: #222;
-      line-height: 1.6;
-    }
+  header h1, footer p {
+    margin: 0;
+  }
 
-    header, footer {
-      background: #1e1e1e;
-      color: #f5f5f5;
-      padding: 30px 20px;
-      text-align: center;
-      border-radius: 0;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    }
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 30px auto;
+  }
 
-    header h1 {
-      font-size: 2.4rem;
-      margin-bottom: 10px;
-      letter-spacing: 1px;
-    }
+  .about, .projects {
+    margin-bottom: 50px;
+  }
 
-    header p a {
-      color: #f5f5f5;
-      background: #333;
-      padding: 6px 14px;
-      border-radius: 5px;
-      text-decoration: none;
-      margin: 0 5px;
-      transition: background 0.3s, transform 0.3s;
-      font-size: 0.9rem;
-    }
+  .about h2, .projects h2 {
+    color: #00bfae;
+    margin-bottom: 20px;
+  }
 
-    header p a:hover {
-      background: #555;
-      transform: scale(1.05);
-    }
+  .about p {
+    line-height: 1.7;
+  }
 
-    nav {
-      background: #2c2c2c;
-      padding: 12px 0;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      box-shadow: inset 0 -2px 0 rgba(255,255,255,0.1);
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+  }
 
-    nav a {
-      color: #f5f5f5;
-      margin: 5px 18px;
-      text-decoration: none;
-      font-weight: 600;
-      text-transform: uppercase;
-      font-size: 0.95rem;
-      transition: color 0.3s, transform 0.3s;
-    }
+  .card {
+    background: #1e1e1e;
+    padding: 20px;
+    border-radius: 12px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  }
 
-    nav a:hover {
-      color: #ff6b6b;
-      transform: scale(1.1);
-    }
+  .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+  }
 
-    section {
-      padding: 40px 30px;
-      max-width: 1000px;
-      margin: 40px auto;
-      background: rgba(255,255,255,0.95);
-      border-radius: 16px;
-      border: 1px solid #ddd;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
+  .card h3 {
+    color: #00bfae;
+    margin-top: 0;
+  }
 
-    section:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 12px 28px rgba(0,0,0,0.2);
-    }
+  .card iframe {
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 10px;
+  }
 
-    h2 {
-      color: #111;
-      margin-bottom: 20px;
-      font-size: 1.9rem;
-      border-bottom: 2px solid #111;
-      padding-bottom: 5px;
-    }
-
-    h3 {
-      margin-top: 25px;
-      color: #333;
-    }
-
-    p {
-      margin-bottom: 15px;
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 15px;
-      border-radius: 8px;
-      overflow: hidden;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.08);
-    }
-
-    th, td {
-      padding: 12px;
-      text-align: left;
-      border-bottom: 1px solid #ccc;
-    }
-
-    th {
-      background: #333;
-      color: #f5f5f5;
-      font-weight: bold;
-    }
-
-    tr:hover {
-      background: #f1f1f1;
-    }
-
-    iframe {
-      width: 100%;
-      height: 450px;
-      border-radius: 12px;
-      margin-top: 15px;
-      transition: transform 0.3s;
-      border: 2px solid #222;
-    }
-
-    iframe:hover {
-      transform: scale(1.02);
-    }
-
-    ul {
-      margin-top: 10px;
-      padding-left: 20px;
-    }
-
-    li {
-      margin-bottom: 10px;
-      position: relative;
-      padding-left: 20px;
-    }
-
-    li::before {
-      content: '⚡';
-      position: absolute;
-      left: 0;
-      color: #ff6b6b;
-    }
-
-    a.button {
-      display: inline-block;
-      background: #222;
-      color: #f5f5f5;
-      padding: 8px 18px;
-      margin-top: 8px;
-      border-radius: 6px;
-      text-decoration: none;
-      transition: background 0.3s, transform 0.3s;
-      font-weight: 600;
-    }
-
-    a.button:hover {
-      background: #ff6b6b;
-      transform: scale(1.05);
-    }
-
-    .warning {
-      color: #ff3b3b;
-      font-weight: bold;
-    }
-
-    footer p {
-      margin: 0;
-      font-size: 0.95rem;
-      letter-spacing: 1px;
-    }
-
-    @media screen and (max-width: 768px) {
-      nav a {
-        margin: 5px 10px;
-        font-size: 0.85rem;
-      }
-      section {
-        padding: 25px 20px;
-      }
-      header h1 {
-        font-size: 2rem;
-      }
-    }
-  </style>
+  .ai-background {
+    background: linear-gradient(135deg, rgba(0,191,174,0.05), rgba(255,255,255,0.05));
+    border-radius: 12px;
+    padding: 20px;
+  }
+</style>
 </head>
 <body>
 
 <header>
-  <h1>BEN WAFULA</h1>
-  <p>
-    <a href="https://www.linkedin.com/in/ben-wafula-2898ab2a5" target="_blank">LinkedIn</a>
-    <a href="mailto:wafulaben2021@gmail.com">Email</a>
-  </p>
+  <h1>Hillary Kusumo</h1>
+  <p>AI & Data Annotation Specialist | Virtual Assistant Trainee</p>
 </header>
 
-<nav>
-  <a href="#overview">Overview</a>
-  <a href="#rubric">Rubric</a>
-  <a href="#case-studies">Case Studies</a>
-  <a href="#modules">Modules</a>
-  <a href="#image-bursts">Image Bursts</a>
-  <a href="#video-bursts">Video Bursts</a>
-  <a href="#summary">Summary</a>
-</nav>
+<div class="container">
 
-<section id="overview">
-  <h2>Overview</h2>
-  <p>
-    This portfolio demonstrates structured evaluation of visual content. It covers both images and videos using defined rubrics, modules, and guidelines. Evaluations focus on instruction adherence, motion consistency, audio synchronization, and visual composition.
-  </p>
-  <p>
-    Sections include detailed case studies, modules explaining evaluation methods, and guidelines for image and video bursts. Each evaluation step provides reasoning, scoring, and final selection rationale. The approach ensures objectivity and reliability.
-  </p>
-</section>
+  <!-- About Me Section -->
+  <section class="about ai-background">
+    <h2>About Me</h2>
+    <p>
+      I am Hillary Kusumo, an experienced data annotation specialist and Virtual Assistant trainee. I have over 5 years of experience in image, video, and autonomous data annotation projects. I work with precision to ensure high-quality data for AI and machine learning systems. My recent focus includes generative AI, improving annotation pipelines, and helping teams deliver consistent, accurate datasets.
+    </p>
+  </section>
 
-<section id="rubric">
-  <h2>Rubric Framework</h2>
-  <p>
-    Evaluators use this rubric to score outputs consistently. Criteria include instruction adherence, motion, audio, and composition. Scores range from 1 (poor) to 5 (excellent). Proper scoring ensures comparability and fairness.
-  </p>
-  <table>
-    <tr><th>Criterion</th><th>Description</th><th>Scale</th></tr>
-    <tr><td>Instruction</td><td>Follows prompt accurately</td><td>1–5</td></tr>
-    <tr><td>Motion</td><td>Smoothness and consistency</td><td>1–5</td></tr>
-    <tr><td>Audio</td><td>Alignment and clarity</td><td>1–5</td></tr>
-    <tr><td>Composition</td><td>Framing and balance</td><td>1–5</td></tr>
-  </table>
-</section>
+  <!-- Projects / Work Section -->
+  <section class="projects">
+    <h2>My Work</h2>
+    <div class="card-grid">
 
-<section id="case-studies">
-  <h2>Case Studies</h2>
-  <p>Real evaluation examples illustrate rubric application. Each video is scored individually with reasoning.</p>
-  <h3>Video 1</h3>
-  <iframe src="https://player.vimeo.com/video/1180209118" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-  <a href="https://vimeo.com/1180209118" target="_blank" class="button">Open Video 1</a>
-  <table>
-    <tr><th>Criterion</th><th>Score</th><th>Reason</th></tr>
-    <tr><td>Instruction</td><td>4</td><td>Mostly follows prompt</td></tr>
-    <tr><td>Motion</td><td>2</td><td>Ball disappears after hitting dome</td></tr>
-    <tr><td>Audio</td><td>4</td><td>Mostly aligned, minor errors</td></tr>
-    <tr><td>Composition</td><td>4</td><td>Acceptable framing</td></tr>
-  </table>
+      <div class="card">
+        <h3>Video Project 1</h3>
+        <iframe src="https://player.vimeo.com/video/1180209118" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+        <p>Highlight: Smooth transitions, clean annotations, AI-assisted enhancements.</p>
+      </div>
 
-  <h3>Video 2</h3>
-  <iframe src="https://player.vimeo.com/video/1180209105" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-  <a href="https://vimeo.com/1180209105" target="_blank" class="button">Open Video 2</a>
-  <table>
-    <tr><th>Criterion</th><th>Score</th><th>Reason</th></tr>
-    <tr><td>Instruction</td><td>4</td><td>Follows prompt well</td></tr>
-    <tr><td>Motion</td><td>5</td><td>Natural and consistent break</td></tr>
-    <tr><td>Audio</td><td>5</td><td>Clean and synced</td></tr>
-    <tr><td>Composition</td><td>4</td><td>Balanced framing</td></tr>
-  </table>
+      <div class="card">
+        <h3>Video Project 2</h3>
+        <iframe src="https://player.vimeo.com/video/1180209118" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+        <p>Favorite: Natural break points, consistent audio, disappearing ball after dome effect.</p>
+      </div>
 
-  <p><strong>Final Selection:</strong> Video 2 preferred for consistent motion, clear audio, and quality framing.</p>
-</section>
+      <div class="card">
+        <h3>Generative AI Work</h3>
+        <p>Projects include creating AI-generated datasets, training models, and refining annotation workflows for quality control.</p>
+      </div>
 
-<section id="modules">
-  <h2>Evaluation Modules</h2>
-  <ul>
-    <li><strong>Motion Analysis:</strong> Detects movement inconsistencies and unnatural transitions.</li>
-    <li><strong>Audio Sync:</strong> Checks alignment and clarity of sound.</li>
-    <li><strong>Composition Check:</strong> Assesses visual framing and balance.</li>
-    <li><strong>Instruction Compliance:</strong> Confirms prompt adherence.</li>
-  </ul>
-</section>
+      <div class="card">
+        <h3>Annotation Projects</h3>
+        <p>Worked on autonomous driving, retail shelf detection, and drone agricultural imagery with bounding boxes, polygons, and segmentation tools.</p>
+      </div>
 
-<section id="image-bursts">
-  <h2>Image Bursts</h2>
-  <p>Image evaluation includes editing and generation tasks, focusing on quality, instruction following, and overall preference.</p>
-  <ul>
-    <li>Review <strong>Defects Document</strong> for common errors.</li>
-    <li>Follow <strong>Image Edit Guidelines</strong> and <strong>Image Generation Guidelines</strong>.</li>
-    <li class="warning">Avoid ties like "About the same" and select "Overall Best" carefully.</li>
-  </ul>
-</section>
+    </div>
+  </section>
 
-<section id="video-bursts">
-  <h2>Video Bursts</h2>
-  <ul>
-    <li>Review <strong>Examples of Audio and Visual Noise</strong>.</li>
-    <li>Follow <strong>Video Edit Guidelines</strong> and <strong>Video Generation Guidelines</strong>.</li>
-    <li>Consult <strong>FAQ</strong> for common questions.</li>
-    <li class="warning">Focus on instruction adherence, motion, audio, and visual quality.</li>
-  </ul>
-</section>
-
-<section id="summary">
-  <h2>Summary</h2>
-  <p>
-    This portfolio demonstrates rigorous evaluation of images and videos using structured rubrics, modules, and guidelines. The process ensures reliable selection of outputs that adhere to prompts, maintain quality, and meet professional standards.
-  </p>
-</section>
+</div>
 
 <footer>
-  <p>© 2026 BEN WAFULA</p>
+  <p>&copy; 2026 Hillary Kusumo | All rights reserved</p>
 </footer>
 
 </body>
