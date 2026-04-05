@@ -78,7 +78,7 @@
     }
 
     li {
-      margin-bottom: 8px;
+      margin-bottom: 10px;
     }
 
     strong {
@@ -88,6 +88,10 @@
     .warning {
       color: red;
       font-weight: bold;
+    }
+
+    p {
+      line-height: 1.6;
     }
   </style>
 </head>
@@ -113,11 +117,28 @@
 
 <section id="overview">
   <h2>Overview</h2>
-  <p>This portfolio demonstrates evaluation of videos and images using structured rubrics and guidelines. All outputs are scored independently for quality and instruction adherence.</p>
+  <p>
+    This portfolio demonstrates a comprehensive approach to evaluating visual content, including both images and videos. The evaluation process is guided by clearly defined rubrics, modules, and detailed guidelines to ensure objectivity, consistency, and high-quality standards. Each item is analyzed for instruction adherence, visual quality, motion or audio consistency, and overall composition. 
+  </p>
+  <p>
+    The portfolio is divided into several sections covering rubric definitions, detailed case studies for videos, evaluation modules, and guidelines for both image and video bursts. Each section provides step-by-step explanations of how content is reviewed, what criteria are considered, and how final selections are made. By following these structured methods, evaluators are able to provide reliable and actionable feedback for improving outputs or selecting the most suitable content for sharing or publication.
+  </p>
+  <p>
+    The goal of this portfolio is to highlight a disciplined evaluation process that is transparent, repeatable, and defensible. It shows how minor defects, instruction compliance, and overall presentation are considered together to select the best outputs, whether in video or image formats.
+  </p>
 </section>
 
 <section id="rubric">
   <h2>Rubric Framework</h2>
+  <p>
+    The rubric defines the primary criteria used to evaluate both images and videos. Each criterion has a defined scale and description to ensure consistent scoring across all evaluators.
+  </p>
+  <p>
+    <strong>Instruction:</strong> Measures how accurately the output follows the prompt or request. An output may be visually appealing but fail to meet the task requirements if it does not follow instructions.  
+    <strong>Motion:</strong> Evaluates smoothness, continuity, and realism of movement in videos or animated content. Irregular movements, frame skipping, or unnatural transitions reduce scores.  
+    <strong>Audio:</strong> Assesses alignment, clarity, and synchronization of sound with visual events. Audio defects, noise, or mismatches impact the quality of the evaluation.  
+    <strong>Composition:</strong> Focuses on framing, visual balance, and aesthetics. Proper composition ensures the subject is clear and visually pleasing, without distracting artifacts or poor alignment.
+  </p>
   <table>
     <tr>
       <th>Criterion</th>
@@ -126,22 +147,22 @@
     </tr>
     <tr>
       <td>Instruction</td>
-      <td>Matches prompt</td>
+      <td>Matches prompt accurately and completely</td>
       <td>1–5</td>
     </tr>
     <tr>
       <td>Motion</td>
-      <td>Smoothness / consistency</td>
+      <td>Movement is smooth, consistent, and natural</td>
       <td>1–5</td>
     </tr>
     <tr>
       <td>Audio</td>
-      <td>Sync and clarity</td>
+      <td>Sync, clarity, and quality of sound</td>
       <td>1–5</td>
     </tr>
     <tr>
       <td>Composition</td>
-      <td>Framing and visual balance</td>
+      <td>Visual balance, framing, and presentation</td>
       <td>1–5</td>
     </tr>
   </table>
@@ -149,17 +170,19 @@
 
 <section id="case-studies">
   <h2>Case Studies</h2>
-  <p>Examples showing practical application of the rubric for video evaluation.</p>
+  <p>
+    This section presents practical examples of video evaluation using the rubric. Each video is scored independently to show how criteria apply to real content.
+  </p>
 
   <h3>Video 1</h3>
   <iframe src="https://player.vimeo.com/video/1180209118" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
   <p><a href="https://vimeo.com/1180209118" target="_blank">Open Video 1</a></p>
   <table>
     <tr><th>Criterion</th><th>Score</th><th>Reason</th></tr>
-    <tr><td>Instruction</td><td>4</td><td>Mostly follows prompt</td></tr>
-    <tr><td>Motion</td><td>2</td><td>Ball disappears after hitting the dome</td></tr>
-    <tr><td>Audio</td><td>4</td><td>Clear but slightly misaligned</td></tr>
-    <tr><td>Composition</td><td>4</td><td>Framing is acceptable</td></tr>
+    <tr><td>Instruction</td><td>4</td><td>Mostly follows prompt, but minor deviations present</td></tr>
+    <tr><td>Motion</td><td>2</td><td>Ball disappears after hitting the dome, indicating inconsistent motion</td></tr>
+    <tr><td>Audio</td><td>4</td><td>Audio is mostly clear but slightly misaligned</td></tr>
+    <tr><td>Composition</td><td>4</td><td>Framing is acceptable but not optimal</td></tr>
   </table>
 
   <h3 style="margin-top:30px;">Video 2</h3>
@@ -167,70 +190,84 @@
   <p><a href="https://vimeo.com/1180209105" target="_blank">Open Video 2</a></p>
   <table>
     <tr><th>Criterion</th><th>Score</th><th>Reason</th></tr>
-    <tr><td>Instruction</td><td>4</td><td>Follows prompt well</td></tr>
-    <tr><td>Motion</td><td>5</td><td>Natural and consistent break</td></tr>
-    <tr><td>Audio</td><td>5</td><td>Clean and well synced</td></tr>
-    <tr><td>Composition</td><td>4</td><td>Balanced framing</td></tr>
+    <tr><td>Instruction</td><td>4</td><td>Follows prompt well with minimal errors</td></tr>
+    <tr><td>Motion</td><td>5</td><td>Motion is consistent, natural, and realistic</td></tr>
+    <tr><td>Audio</td><td>5</td><td>Audio is clean, clear, and fully synced</td></tr>
+    <tr><td>Composition</td><td>4</td><td>Balanced framing and clear visual presentation</td></tr>
   </table>
 
-  <p><strong>Final Selection:</strong> Video 2 is the preferred output due to consistent motion and audio alignment.</p>
+  <p>
+    <strong>Final Selection:</strong> Video 2 is preferred due to consistent motion, superior audio alignment, and overall visual quality. Video 1 demonstrates clear defects that lower its reliability as a quality output.
+  </p>
 </section>
 
 <section id="modules">
-  <h2>Modules Overview</h2>
-  <p>Evaluation modules used for reviewing outputs.</p>
-  <table>
-    <tr><th>Module</th><th>Description</th><th>Purpose</th></tr>
-    <tr><td>Module 1: Motion Analysis</td><td>Tracks object movement</td><td>Detects inconsistencies like missing frames</td></tr>
-    <tr><td>Module 2: Audio Sync</td><td>Checks audio alignment</td><td>Ensures voice or sound matches video events</td></tr>
-    <tr><td>Module 3: Composition Check</td><td>Evaluates framing and visual balance</td><td>Maintains visual standards</td></tr>
-    <tr><td>Module 4: Instruction Compliance</td><td>Compares output to prompt</td><td>Confirms video follows requested tasks</td></tr>
-  </table>
+  <h2>Evaluation Modules</h2>
+  <p>
+    The evaluation process is supported by several modules that systematically review content. Each module focuses on a specific aspect of output quality.
+  </p>
+  <ul>
+    <li><strong>Module 1: Motion Analysis</strong> – Detects inconsistencies in object movement, missing frames, or unnatural transitions.</li>
+    <li><strong>Module 2: Audio Sync</strong> – Ensures audio tracks align correctly with visual events, including dialogue, sound effects, and background music.</li>
+    <li><strong>Module 3: Composition Check</strong> – Reviews framing, balance, and aesthetics to ensure outputs meet visual standards.</li>
+    <li><strong>Module 4: Instruction Compliance</strong> – Compares outputs against the original prompt to verify correct execution of requested edits or generation tasks.</li>
+  </ul>
+  <p>
+    Using these modules allows evaluators to break down complex visual and audio outputs into measurable components, which improves scoring consistency and supports objective decision-making.
+  </p>
 </section>
 
 <section id="image-bursts">
   <h2>Image Bursts</h2>
+  <p>
+    Image evaluation focuses on two main types of tasks: <strong>image editing</strong> and <strong>image generation</strong>. Both require careful assessment of instruction adherence, visual quality, and overall preference.
+  </p>
   <h3>Image Materials Review</h3>
   <ul>
-    <li>First, review <strong>Defects Document</strong></li>
-    <li>Review <strong>Image Edit Guidelines</strong></li>
-    <li>Review <strong>Image Generation Guidelines</strong></li>
+    <li>Review <strong>Defects Document</strong> to identify common errors in images.</li>
+    <li>Review <strong>Image Edit Guidelines</strong> for evaluating edited images.</li>
+    <li>Review <strong>Image Generation Guidelines</strong> for evaluating generated images.</li>
   </ul>
-  <p class="warning">NOTE: Questions may change, but focus on quality and instruction following.</p>
+  <p class="warning">NOTE: Questions may change, but focus on the main principles, including quality and instruction following.</p>
 
   <h3>Image Edit Guidelines</h3>
   <ul>
-    <li>Evaluate image pairs based on an original image with a prompt.</li>
-    <li>Check instruction adherence, overall preference, and defects.</li>
-    <li>Provide 1–2 sentence justification when a text box is available.</li>
-    <li>Avoid selecting ties like "About the same" as much as possible.</li>
-    <li>For "Overall Best", choose the image you prefer most. Avoid images with egregious defects or unprompted watermarks.</li>
+    <li>Evaluate image pairs based on an original image and a specific edit prompt.</li>
+    <li>Assess instruction adherence, overall preference, and any defects.</li>
+    <li>Provide concise justification when required.</li>
+    <li>Avoid ties like "About the same" whenever possible.</li>
+    <li>Select "Overall Best" based on quality, instruction adherence, and shareability. Avoid images with severe defects or unprompted watermarks.</li>
   </ul>
 
   <h3>Image Generation Guidelines</h3>
   <ul>
-    <li>Evaluate 2–4 generated images per text prompt.</li>
-    <li>Check instruction following and overall preference.</li>
-    <li>Align "Overall Best" with the most shareable and high-quality image.</li>
-    <li>Prefer photorealism unless a specific art style is requested.</li>
+    <li>Evaluate 2–4 images generated from a text prompt.</li>
+    <li>Assess each independently for instruction adherence and overall preference.</li>
+    <li>Choose "Overall Best" as the image that is most shareable and meets quality standards.</li>
+    <li>Prefer photorealistic outputs unless a specific style is requested.</li>
   </ul>
 </section>
 
 <section id="video-bursts">
   <h2>Video Bursts</h2>
+  <p>
+    Video evaluation follows a similar structured approach, assessing both generated and edited content. The focus is on motion, audio, instruction adherence, and overall visual quality.
+  </p>
   <h3>Video Materials Review</h3>
   <ul>
-    <li>Review <strong>Examples of Audio Noise and Visual Noise</strong></li>
-    <li>Review <strong>Video Edit Guidelines</strong></li>
-    <li>Review <strong>Video Generation Guidelines</strong></li>
-    <li>Review <strong>FAQ</strong></li>
+    <li>Review <strong>Examples of Audio Noise and Visual Noise</strong> to identify common defects.</li>
+    <li>Review <strong>Video Edit Guidelines</strong> to assess edited outputs.</li>
+    <li>Review <strong>Video Generation Guidelines</strong> to assess outputs generated from text prompts.</li>
+    <li>Review <strong>FAQ</strong> for clarification on common evaluation questions.</li>
   </ul>
-  <p class="warning">NOTE: Questions may change, but focus on quality and instruction following.</p>
+  <p class="warning">NOTE: Questions may change, but always focus on instruction adherence, motion consistency, audio quality, and overall presentation.</p>
 </section>
 
 <section id="summary">
   <h2>Summary</h2>
-  <p>This portfolio shows structured evaluation for both images and videos. Clear rubrics, modules, and guidelines help ensure objective scoring and selection of high-quality outputs.</p>
+  <p>
+    This portfolio demonstrates a rigorous approach to evaluating both images and videos. By using clearly defined rubrics, structured modules, and comprehensive guidelines, evaluators can consistently select the highest-quality outputs. Instruction adherence, motion consistency, audio synchronization, and visual composition are all carefully considered in every evaluation. The process ensures objectivity, repeatability, and defensible selection of outputs suitable for sharing or publication.
+  </p>
 </section>
 
 <footer>
