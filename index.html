@@ -1,128 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Ben Wafula Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-  <style>
-    body {
-      font-family: 'Roboto', sans-serif;
-      background: #e8e8e8 url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mO0UQ8AAFoA05V9pAAAAABJRU5ErkJggg==') repeat;
-      margin: 0;
-      color: #222;
-    }
+<meta charset="UTF-8">
+<title>Evaluation Portfolio - Ben Wafula</title>
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background:#f5f5f5;
+  color:#222;
+  line-height:1.6;
+  overflow-x:hidden;
+  position:relative;
+}
 
-    header {
-      background: #f4f4f4;
-      color: #111;
-      padding: 40px 20px;
-      text-align: center;
-      border-bottom: 1px solid #ccc;
-    }
+/* AI-inspired subtle animated background */
+body::before {
+  content:"";
+  position:fixed;
+  top:0; left:0;
+  width:100%; height:100%;
+  background:radial-gradient(circle at 30% 30%, rgba(255,255,255,0.05), transparent 70%),
+             radial-gradient(circle at 70% 70%, rgba(255,255,255,0.05), transparent 70%);
+  background-size:400% 400%;
+  animation:movebg 60s linear infinite;
+  pointer-events:none;
+  z-index:-1;
+}
+@keyframes movebg {
+  0% { background-position:0% 0%, 100% 100%; }
+  50% { background-position:100% 100%, 0% 0%; }
+  100% { background-position:0% 0%, 100% 100%; }
+}
 
-    header a {
-      color: #111;
-      background: #ddd;
-      padding: 6px 12px;
-      border-radius: 6px;
-      text-decoration: none;
-      margin: 0 5px;
-      font-weight: 500;
-      transition: background 0.3s;
-    }
+header, footer {
+  background:#1e1e1e;
+  color:#f5f5f5;
+  padding:30px 20px;
+  text-align:center;
+  box-shadow:0 4px 10px rgba(0,0,0,0.2);
+  transition:background 0.3s;
+}
+header h1 { font-size:2.4rem; margin-bottom:10px; letter-spacing:1px; }
+header p a {
+  color:#f5f5f5;
+  background:#333;
+  padding:6px 14px;
+  border-radius:5px;
+  text-decoration:none;
+  margin:0 5px;
+  transition: background 0.3s, transform 0.3s;
+  font-size:0.9rem;
+}
+header p a:hover { background:#ff6b6b; transform:scale(1.05); }
 
-    header a:hover {
-      background: #bbb;
-    }
+nav {
+  background:#2c2c2c;
+  padding:12px 0;
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  box-shadow:inset 0 -2px 0 rgba(255,255,255,0.1);
+  position:sticky;
+  top:0;
+  z-index:100;
+}
+nav a {
+  color:#f5f5f5;
+  margin:5px 18px;
+  text-decoration:none;
+  font-weight:600;
+  text-transform:uppercase;
+  font-size:0.95rem;
+  transition:color 0.3s, transform 0.3s;
+}
+nav a:hover { color:#ff6b6b; transform:scale(1.1); }
 
-    nav {
-      background: #333;
-      padding: 12px 0;
-      text-align: center;
-    }
+section {
+  padding:40px 30px;
+  max-width:1000px;
+  margin:40px auto;
+  background:rgba(255,255,255,0.97);
+  border-radius:16px;
+  border:1px solid #ddd;
+  box-shadow:0 8px 20px rgba(0,0,0,0.15);
+  transition:transform 0.3s, box-shadow 0.3s, background 0.3s;
+}
+section:hover { transform:translateY(-5px); box-shadow:0 12px 28px rgba(0,0,0,0.2); }
 
-    nav a {
-      color: #f4f4f4;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: 500;
-      transition: color 0.3s;
-    }
-
-    nav a:hover {
-      color: #ddd;
-    }
-
-    section {
-      max-width: 1000px;
-      margin: 30px auto;
-      padding: 30px;
-      background: rgba(255,255,255,0.95);
-      border-radius: 16px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-
-    section:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 12px 28px rgba(0,0,0,0.2);
-    }
-
-    section h2 {
-      color: #111;
-      font-size: 1.8rem;
-      margin-bottom: 20px;
-      border-bottom: 2px solid #111;
-      padding-bottom: 6px;
-    }
-
-    section p {
-      margin-bottom: 15px;
-      line-height: 1.6;
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 15px;
-      border-radius: 8px;
-      overflow: hidden;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
-
-    th, td {
-      padding: 12px;
-      text-align: left;
-    }
-
-    th {
-      background: #555;
-      color: #fff;
-    }
-
-    tr:nth-child(even) {
-      background: #f2f2f2;
-    }
-
-    iframe {
-      width: 100%;
-      height: 400px;
-      border-radius: 12px;
-      margin-top: 10px;
-      border: 1px solid #ccc;
-    }
-
-    footer {
-      text-align: center;
-      padding: 25px 10px;
-      background: #f4f4f4;
-      color: #111;
-      border-top: 1px solid #ccc;
-      margin-top: 40px;
-    }
-  </style>
+h2 { color:#111; margin-bottom:20px; font-size:1.9rem; border-bottom:2px solid #111; padding-bottom:5px; }
+h3 { margin-top:25px; color:#333; }
+p { margin-bottom:15px; }
+table { width:100%; border-collapse:collapse; margin-top:15px; border-radius:8px; overflow:hidden; box-shadow:0 4px 8px rgba(0,0,0,0.08); }
+th, td { padding:12px; text-align:left; border-bottom:1px solid #ccc; }
+th { background:#333; color:#f5f5f5; font-weight:bold; }
+tr:hover { background:#f1f1f1; }
+iframe { width:100%; height:450px; border-radius:12px; margin-top:15px; transition:transform 0.3s; border:2px solid #222; }
+iframe:hover { transform:scale(1.02); }
+ul { margin-top:10px; padding-left:20px; }
+li { margin-bottom:10px; position:relative; padding-left:20px; }
+li::before { content:'⚡'; position:absolute; left:0; color:#ff6b6b; }
+a.button {
+  display:inline-block;
+  background:#222;
+  color:#f5f5f5;
+  padding:8px 18px;
+  margin-top:8px;
+  border-radius:6px;
+  text-decoration:none;
+  transition:background 0.3s, transform 0.3s;
+  font-weight:600;
+}
+a.button:hover { background:#ff6b6b; transform:scale(1.05); }
+.warning { color:#ff3b3b; font-weight:bold; }
+footer p { margin:0; font-size:0.95rem; letter-spacing:1px; }
+@media screen and (max-width:768px) {
+  nav a { margin:5px 10px; font-size:0.85rem; }
+  section { padding:25px 20px; }
+  header h1 { font-size:2rem; }
+}
+</style>
 </head>
-
 <body>
 
 <header>
@@ -135,36 +134,44 @@
 
 <nav>
   <a href="#overview">Overview</a>
+  <a href="#about">About Me</a>
   <a href="#rubric">Rubric</a>
   <a href="#case-studies">Case Studies</a>
   <a href="#modules">Modules</a>
   <a href="#image-bursts">Image Bursts</a>
   <a href="#video-bursts">Video Bursts</a>
+  <a href="#resume">Resume</a>
+  <a href="#certificate">Certificate</a>
   <a href="#summary">Summary</a>
 </nav>
 
-<section id="about-me">
-  <h2>About Me</h2>
-  <p>I am Hillary Kusumo, a data annotation specialist with over 5 years of experience in image and video labeling. I have worked extensively in generative AI projects, ensuring high-quality datasets for training AI models.</p>
-  <p>My expertise includes autonomous driving annotation, retail and drone image labeling, and video content evaluation. I combine meticulous attention to detail with practical knowledge of AI workflows to deliver reliable, structured outputs.</p>
-  <p>I am passionate about creating datasets that enable AI systems to learn accurately, with consistent quality, and I continuously explore new methods in generative AI to improve annotation efficiency and model performance.</p>
-</section>
-
 <section id="overview">
   <h2>Overview</h2>
-  <p>This portfolio demonstrates structured evaluation of visual content. It covers images and videos using defined rubrics, modules, and guidelines. Evaluations emphasize instruction adherence, motion consistency, audio alignment, and visual composition.</p>
-  <p>Sections include case studies, modules explaining evaluation methods, and guidelines for image and video bursts. Each evaluation step provides reasoning, scoring, and final selection rationale, ensuring objectivity and reliability.</p>
+  <p>
+    This portfolio demonstrates structured evaluation of visual content. It covers images and videos using defined rubrics, modules, and guidelines. Evaluations focus on instruction adherence, motion consistency, audio synchronization, and visual composition.
+  </p>
+  <p>
+    Sections include detailed case studies, modules explaining evaluation methods, and guidelines for image and video bursts. Each evaluation step provides reasoning, scoring, and final selection rationale. The approach ensures objectivity and reliability.
+  </p>
+</section>
+
+<section id="about">
+  <h2>About Me</h2>
+  <p>
+    I am Ben Wafula, a data annotation and AI evaluation specialist with over 5 years of experience. I work across video and image datasets to deliver precise, high-quality results. My expertise spans bounding boxes, polygons, segmentation, and generative AI workflows.
+  </p>
+  <p>
+    Currently, I am expanding my skills as a Virtual Assistant, focusing on project management, client communication, and administrative support. I aim to combine AI expertise and operational efficiency to deliver consistent and reliable outputs.
+  </p>
 </section>
 
 <section id="rubric">
   <h2>Rubric Framework</h2>
-  <p>Evaluators use this rubric to score outputs consistently. Criteria include instruction adherence, motion, audio, and composition. Scores range from 1 (poor) to 5 (excellent).</p>
+  <p>
+    Evaluators use this rubric to score outputs consistently. Criteria include instruction adherence, motion, audio, and composition. Scores range from 1 (poor) to 5 (excellent). Proper scoring ensures comparability and fairness.
+  </p>
   <table>
-    <tr>
-      <th>Criterion</th>
-      <th>Description</th>
-      <th>Scale</th>
-    </tr>
+    <tr><th>Criterion</th><th>Description</th><th>Scale</th></tr>
     <tr><td>Instruction</td><td>Follows prompt accurately</td><td>1–5</td></tr>
     <tr><td>Motion</td><td>Smoothness and consistency</td><td>1–5</td></tr>
     <tr><td>Audio</td><td>Alignment and clarity</td><td>1–5</td></tr>
@@ -174,56 +181,86 @@
 
 <section id="case-studies">
   <h2>Case Studies</h2>
-  <p>These videos show real evaluation examples using the rubric above.</p>
+  <p>Real evaluation examples illustrate rubric application. Each video is scored individually with reasoning.</p>
 
   <h3>Video 1</h3>
-  <iframe src="https://player.vimeo.com/video/1180209118" allow="autoplay; fullscreen" allowfullscreen></iframe>
-  <p><a href="https://vimeo.com/1180209118" target="_blank">Open Video 1</a></p>
+  <iframe src="https://player.vimeo.com/video/1180209118" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+  <a href="https://vimeo.com/1180209118" target="_blank" class="button">Open Video 1</a>
   <table>
     <tr><th>Criterion</th><th>Score</th><th>Reason</th></tr>
     <tr><td>Instruction</td><td>4</td><td>Mostly follows prompt</td></tr>
-    <tr><td>Motion</td><td>2</td><td>Ball disappears after hitting the dome</td></tr>
-    <tr><td>Audio</td><td>4</td><td>Clear but not fully aligned</td></tr>
-    <tr><td>Composition</td><td>4</td><td>Framing is acceptable</td></tr>
+    <tr><td>Motion</td><td>2</td><td>Ball disappears after hitting dome</td></tr>
+    <tr><td>Audio</td><td>4</td><td>Mostly aligned, minor errors</td></tr>
+    <tr><td>Composition</td><td>4</td><td>Acceptable framing</td></tr>
   </table>
 
   <h3>Video 2</h3>
-  <iframe src="https://player.vimeo.com/video/1180209105" allow="autoplay; fullscreen" allowfullscreen></iframe>
-  <p><a href="https://vimeo.com/1180209105" target="_blank">Open Video 2</a></p>
+  <iframe src="https://player.vimeo.com/video/1180209105" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+  <a href="https://vimeo.com/1180209105" target="_blank" class="button">Open Video 2</a>
   <table>
     <tr><th>Criterion</th><th>Score</th><th>Reason</th></tr>
     <tr><td>Instruction</td><td>4</td><td>Follows prompt well</td></tr>
     <tr><td>Motion</td><td>5</td><td>Natural and consistent break</td></tr>
-    <tr><td>Audio</td><td>5</td><td>Clean and well synced</td></tr>
+    <tr><td>Audio</td><td>5</td><td>Clean and synced</td></tr>
     <tr><td>Composition</td><td>4</td><td>Balanced framing</td></tr>
   </table>
 
-  <p><strong>Final Selection:</strong> Video 2 is the preferred output. It demonstrates natural motion, realistic breaks, and clean audio synchronization, making it more professional and reliable than Video 1.</p>
+  <p><strong>Final Selection:</strong> Video 2 preferred for consistent motion, clear audio, and quality framing.</p>
+</section>
+
+<section id="modules">
+  <h2>Evaluation Modules</h2>
+  <ul>
+    <li><strong>Motion Analysis:</strong> Detects movement inconsistencies, jitter, and unnatural transitions.</li>
+    <li><strong>Audio Sync:</strong> Ensures sound aligns with visuals and remains clear.</li>
+    <li><strong>Composition Check:</strong> Examines framing, balance, and visual flow.</li>
+    <li><strong>Instruction Compliance:</strong> Confirms outputs follow the defined prompts.</li>
+    <li><strong>Quality Scoring:</strong> Aggregates metrics to determine best overall output.</li>
+    <li><strong>Generative AI Module:</strong> Evaluates AI-assisted outputs for fidelity and instruction alignment.</li>
+  </ul>
 </section>
 
 <section id="image-bursts">
   <h2>Image Bursts</h2>
-  <p><strong>Materials Review:</strong></p>
   <ul>
-    <li>Review Defects Document</li>
-    <li>Review Image Edit Guidelines</li>
-    <li>Review Image Generation Guidelines</li>
+    <li>Review <strong>Defects Document</strong> for common errors and artifacts.</li>
+    <li>Follow <strong>Image Edit Guidelines</strong> and <strong>Image Generation Guidelines</strong>.</li>
+    <li class="warning">Avoid ties like "About the same" and select "Overall Best" carefully.</li>
+    <li>Use examples and reference frames to maintain consistency across bursts.</li>
   </ul>
-  <p>For editing tasks, evaluate image pairs for instruction adherence and defects. Avoid ties and justify selections. Images with serious artifacts or deformities should not be selected as "Overall Best".</p>
-  <p>For generation tasks, evaluate images produced from text prompts. Prefer photorealistic outputs unless a specific style is requested. Avoid selecting images with errors as the final choice.</p>
 </section>
 
 <section id="video-bursts">
   <h2>Video Bursts</h2>
-  <p><strong>Materials Review:</strong></p>
   <ul>
-    <li>Review Examples of Audio Noise and Visual Noise</li>
-    <li>Review Video Edit Guidelines</li>
-    <li>Review Video Generation Guidelines</li>
-    <li>Review FAQ</li>
+    <li>Review <strong>Examples of Audio and Visual Noise</strong> for reference.</li>
+    <li>Follow <strong>Video Edit Guidelines</strong> and <strong>Video Generation Guidelines</strong>.</li>
+    <li>Consult <strong>FAQ</strong> for common questions and clarification.</li>
+    <li class="warning">Focus on instruction adherence, motion, audio, and visual quality.</li>
+    <li>Evaluate multiple iterations to ensure consistency and smooth transitions.</li>
   </ul>
-  <p>Visual noise includes strange motion patterns or discolorations. Audio noise can include static, distortion, or misaligned sounds. Evaluate videos carefully and avoid ties when possible.</p>
-  <p>Videos are assessed for instruction adherence, motion consistency, audio clarity, and visual composition. Video 2 demonstrates a natural and realistic break with properly synced audio, making it the selected output.</p>
+</section>
+
+<section id="resume">
+  <h2>Resume</h2>
+  <p>This section contains my full professional resume, highlighting work experience, projects, and skills in AI evaluation and data annotation.</p>
+  <a href="https://drive.google.com/file/d/1kvNxCSGXsWik5_sMzrUKhOgxW9Nhqt4i/view" target="_blank" class="button">View Resume</a>
+</section>
+
+<section id="certificate">
+  <h2>Certificate</h2>
+  <p>This certificate demonstrates completion of a relevant training program, showcasing competency in AI evaluation and annotation standards.</p>
+  <a href="https://drive.google.com/file/d/1VtiE6jcfa3kaaAVhJ_mWvuZwEw8RtdUD/view" target="_blank" class="button">View Certificate</a>
+</section>
+
+<section id="summary">
+  <h2>Summary</h2>
+  <p>
+    This portfolio demonstrates rigorous evaluation of images and videos using structured rubrics, modules, and guidelines. The process ensures reliable selection of outputs that adhere to prompts, maintain quality, and meet professional standards.
+  </p>
+  <p>
+    Each section contributes to a comprehensive assessment framework. Rubrics provide objectivity, modules clarify methods, and case studies illustrate practical application. Image and video bursts demonstrate evaluation consistency, ensuring outputs are professional and usable.
+  </p>
 </section>
 
 <footer>
