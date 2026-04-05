@@ -15,88 +15,98 @@
     }
 
     body {
-      font-family: 'Arial', sans-serif;
-      background: #f0f4f8;
-      color: #333;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f5f5f5 url('47381f8d-88ae-4374-b2a8-e75f38613398.png') no-repeat center top;
+      background-size: cover;
+      color: #222;
       line-height: 1.6;
     }
 
     header, footer {
-      background: #8fc1e3; /* mild soft blue */
-      color: #333;
+      background: #1e1e1e;
+      color: #f5f5f5;
       padding: 30px 20px;
       text-align: center;
       border-radius: 0;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     }
 
     header h1 {
-      font-size: 2.2rem;
+      font-size: 2.4rem;
       margin-bottom: 10px;
+      letter-spacing: 1px;
     }
 
     header p a {
-      color: #333;
-      background: rgba(255,255,255,0.3);
-      padding: 5px 12px;
+      color: #f5f5f5;
+      background: #333;
+      padding: 6px 14px;
       border-radius: 5px;
       text-decoration: none;
-      transition: background 0.3s;
+      margin: 0 5px;
+      transition: background 0.3s, transform 0.3s;
+      font-size: 0.9rem;
     }
 
     header p a:hover {
-      background: rgba(255,255,255,0.6);
+      background: #555;
+      transform: scale(1.05);
     }
 
     nav {
-      background: #a7d0f2; /* slightly lighter than header */
-      padding: 12px;
+      background: #2c2c2c;
+      padding: 12px 0;
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
-      box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+      box-shadow: inset 0 -2px 0 rgba(255,255,255,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
 
     nav a {
-      color: #333;
-      margin: 5px 15px;
+      color: #f5f5f5;
+      margin: 5px 18px;
       text-decoration: none;
-      font-weight: bold;
+      font-weight: 600;
+      text-transform: uppercase;
+      font-size: 0.95rem;
       transition: color 0.3s, transform 0.3s;
     }
 
     nav a:hover {
-      color: #005a9e;
+      color: #ff6b6b;
       transform: scale(1.1);
     }
 
     section {
-      padding: 40px 20px;
+      padding: 40px 30px;
       max-width: 1000px;
-      margin: 30px auto;
-      background: #e8f2fb; /* light card background */
+      margin: 40px auto;
+      background: rgba(255,255,255,0.95);
       border-radius: 16px;
-      border: 1px solid #c3d9ed;
-      box-shadow: 0 8px 16px rgba(0,0,0,0.12);
+      border: 1px solid #ddd;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
       transition: transform 0.3s, box-shadow 0.3s;
     }
 
     section:hover {
       transform: translateY(-5px);
-      box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+      box-shadow: 0 12px 28px rgba(0,0,0,0.2);
     }
 
     h2 {
-      color: #0078d7;
+      color: #111;
       margin-bottom: 20px;
-      font-size: 1.8rem;
-      border-bottom: 2px solid #0078d7;
+      font-size: 1.9rem;
+      border-bottom: 2px solid #111;
       padding-bottom: 5px;
     }
 
     h3 {
       margin-top: 25px;
-      color: #005a9e;
+      color: #333;
     }
 
     p {
@@ -109,23 +119,23 @@
       margin-top: 15px;
       border-radius: 8px;
       overflow: hidden;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.08);
     }
 
     th, td {
       padding: 12px;
       text-align: left;
-      border-bottom: 1px solid #ddd;
+      border-bottom: 1px solid #ccc;
     }
 
     th {
-      background: #0078d7;
-      color: white;
+      background: #333;
+      color: #f5f5f5;
       font-weight: bold;
     }
 
     tr:hover {
-      background: #d3e6f8;
+      background: #f1f1f1;
     }
 
     iframe {
@@ -134,6 +144,7 @@
       border-radius: 12px;
       margin-top: 15px;
       transition: transform 0.3s;
+      border: 2px solid #222;
     }
 
     iframe:hover {
@@ -148,50 +159,54 @@
     li {
       margin-bottom: 10px;
       position: relative;
-      padding-left: 15px;
+      padding-left: 20px;
     }
 
     li::before {
-      content: '✔';
+      content: '⚡';
       position: absolute;
       left: 0;
-      color: #0078d7;
+      color: #ff6b6b;
     }
 
     a.button {
       display: inline-block;
-      background: #0078d7;
-      color: white;
+      background: #222;
+      color: #f5f5f5;
       padding: 8px 18px;
       margin-top: 8px;
       border-radius: 6px;
       text-decoration: none;
       transition: background 0.3s, transform 0.3s;
+      font-weight: 600;
     }
 
     a.button:hover {
-      background: #005a9e;
+      background: #ff6b6b;
       transform: scale(1.05);
     }
 
     .warning {
-      color: red;
+      color: #ff3b3b;
       font-weight: bold;
     }
 
     footer p {
       margin: 0;
+      font-size: 0.95rem;
+      letter-spacing: 1px;
     }
 
     @media screen and (max-width: 768px) {
       nav a {
         margin: 5px 10px;
+        font-size: 0.85rem;
       }
       section {
-        padding: 25px 15px;
+        padding: 25px 20px;
       }
       header h1 {
-        font-size: 1.8rem;
+        font-size: 2rem;
       }
     }
   </style>
@@ -219,10 +234,10 @@
 <section id="overview">
   <h2>Overview</h2>
   <p>
-    This portfolio demonstrates structured evaluation of visual content. It covers both images and videos using defined rubrics, modules, and guidelines. The evaluation emphasizes instruction adherence, motion consistency, audio synchronization, and visual composition. 
+    This portfolio demonstrates structured evaluation of visual content. It covers both images and videos using defined rubrics, modules, and guidelines. Evaluations focus on instruction adherence, motion consistency, audio synchronization, and visual composition.
   </p>
   <p>
-    Sections include detailed case studies, modules explaining evaluation methods, and guidelines for image and video bursts. Each evaluation step provides reasoning, scoring, and final selection rationale. This structured approach ensures objectivity and reliability.
+    Sections include detailed case studies, modules explaining evaluation methods, and guidelines for image and video bursts. Each evaluation step provides reasoning, scoring, and final selection rationale. The approach ensures objectivity and reliability.
   </p>
 </section>
 
@@ -243,7 +258,6 @@
 <section id="case-studies">
   <h2>Case Studies</h2>
   <p>Real evaluation examples illustrate rubric application. Each video is scored individually with reasoning.</p>
-
   <h3>Video 1</h3>
   <iframe src="https://player.vimeo.com/video/1180209118" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
   <a href="https://vimeo.com/1180209118" target="_blank" class="button">Open Video 1</a>
