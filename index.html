@@ -4,16 +4,8 @@
   <meta charset="UTF-8">
   <title>Evaluation Portfolio</title>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background: #111;
@@ -22,18 +14,13 @@
       overflow-x: hidden;
       position: relative;
     }
-
-    /* Animated network canvas */
     #networkCanvas {
       position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
       z-index: -1;
       background: #111;
     }
-
     header, footer {
       background: rgba(30,30,30,0.9);
       color: #f5f5f5;
@@ -41,174 +28,53 @@
       text-align: center;
       box-shadow: 0 4px 10px rgba(0,0,0,0.3);
     }
-
-    header h1 {
-      font-size: 2.4rem;
-      margin-bottom: 10px;
-      letter-spacing: 1px;
-    }
-
+    header h1 { font-size: 2.4rem; margin-bottom: 10px; letter-spacing: 1px; }
     header p a {
-      color: #f5f5f5;
-      background: #333;
-      padding: 6px 14px;
-      border-radius: 5px;
-      text-decoration: none;
-      margin: 0 5px;
-      transition: background 0.3s, transform 0.3s;
+      color: #f5f5f5; background: #333; padding: 6px 14px; border-radius: 5px;
+      text-decoration: none; margin: 0 5px; transition: background 0.3s, transform 0.3s;
       font-size: 0.9rem;
     }
-
-    header p a:hover {
-      background: #ff6b6b;
-      transform: scale(1.05);
-    }
-
+    header p a:hover { background: #ff6b6b; transform: scale(1.05); }
     nav {
-      background: rgba(44,44,44,0.95);
-      padding: 12px 0;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      position: sticky;
-      top: 0;
-      z-index: 100;
+      background: rgba(44,44,44,0.95); padding: 12px 0; display: flex;
+      justify-content: center; flex-wrap: wrap; position: sticky; top: 0; z-index: 100;
     }
-
     nav a {
-      color: #f5f5f5;
-      margin: 5px 18px;
-      text-decoration: none;
-      font-weight: 600;
-      text-transform: uppercase;
-      font-size: 0.95rem;
+      color: #f5f5f5; margin: 5px 18px; text-decoration: none;
+      font-weight: 600; text-transform: uppercase; font-size: 0.95rem;
       transition: color 0.3s, transform 0.3s;
     }
-
-    nav a:hover {
-      color: #ff6b6b;
-      transform: scale(1.1);
-    }
-
+    nav a:hover { color: #ff6b6b; transform: scale(1.1); }
     section {
-      padding: 40px 30px;
-      max-width: 1000px;
-      margin: 40px auto;
-      background: rgba(255,255,255,0.05);
-      border-radius: 16px;
+      padding: 40px 30px; max-width: 1000px; margin: 40px auto;
+      background: rgba(255,255,255,0.05); border-radius: 16px;
       border: 1px solid rgba(255,255,255,0.1);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.5);
-      transition: transform 0.3s, box-shadow 0.3s;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.5); transition: transform 0.3s, box-shadow 0.3s;
       backdrop-filter: blur(8px);
     }
-
     section:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 12px 28px rgba(0,0,0,0.6);
+      transform: translateY(-5px); box-shadow: 0 12px 28px rgba(0,0,0,0.6);
     }
-
-    h2 {
-      color: #fff;
-      margin-bottom: 20px;
-      font-size: 1.9rem;
-      border-bottom: 2px solid #ff6b6b;
-      padding-bottom: 5px;
-    }
-
-    h3 {
-      margin-top: 25px;
-      color: #ddd;
-    }
-
-    p {
-      margin-bottom: 15px;
-      color: #ddd;
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 15px;
-      border-radius: 8px;
-      overflow: hidden;
-    }
-
-    th, td {
-      padding: 12px;
-      text-align: left;
-      border-bottom: 1px solid #333;
-    }
-
-    th {
-      background: #333;
-      color: #f5f5f5;
-    }
-
-    tr:hover {
-      background: rgba(255,255,255,0.05);
-    }
-
-    iframe {
-      width: 100%;
-      height: 450px;
-      border-radius: 12px;
-      margin-top: 15px;
-      transition: transform 0.3s;
-      border: 2px solid #222;
-    }
-
-    iframe:hover {
-      transform: scale(1.02);
-    }
-
-    ul {
-      margin-top: 10px;
-      padding-left: 20px;
-    }
-
-    li {
-      margin-bottom: 10px;
-      position: relative;
-      padding-left: 20px;
-      color: #ddd;
-    }
-
-    li::before {
-      content: '⚡';
-      position: absolute;
-      left: 0;
-      color: #ff6b6b;
-    }
-
+    h2 { color: #fff; margin-bottom: 20px; font-size: 1.9rem; border-bottom: 2px solid #ff6b6b; padding-bottom: 5px; }
+    h3 { margin-top: 25px; color: #ddd; }
+    p { margin-bottom: 15px; color: #ddd; }
+    table { width: 100%; border-collapse: collapse; margin-top: 15px; border-radius: 8px; overflow: hidden; }
+    th, td { padding: 12px; text-align: left; border-bottom: 1px solid #333; }
+    th { background: #333; color: #f5f5f5; }
+    tr:hover { background: rgba(255,255,255,0.05); }
+    iframe { width: 100%; height: 450px; border-radius: 12px; margin-top: 15px; transition: transform 0.3s; border: 2px solid #222; }
+    iframe:hover { transform: scale(1.02); }
+    ul { margin-top: 10px; padding-left: 20px; }
+    li { margin-bottom: 10px; position: relative; padding-left: 20px; color: #ddd; }
+    li::before { content: '⚡'; position: absolute; left: 0; color: #ff6b6b; }
     a.button {
-      display: inline-block;
-      background: #222;
-      color: #f5f5f5;
-      padding: 8px 18px;
-      margin-top: 8px;
-      border-radius: 6px;
-      text-decoration: none;
-      transition: background 0.3s, transform 0.3s;
-      font-weight: 600;
+      display: inline-block; background: #222; color: #f5f5f5;
+      padding: 8px 18px; margin-top: 8px; border-radius: 6px; text-decoration: none;
+      transition: background 0.3s, transform 0.3s; font-weight: 600;
     }
-
-    a.button:hover {
-      background: #ff6b6b;
-      transform: scale(1.05);
-    }
-
-    .warning {
-      color: #ff3b3b;
-      font-weight: bold;
-    }
-
-    footer p {
-      margin: 0;
-      font-size: 0.95rem;
-      letter-spacing: 1px;
-      color: #ccc;
-    }
-
+    a.button:hover { background: #ff6b6b; transform: scale(1.05); }
+    .warning { color: #ff3b3b; font-weight: bold; }
+    footer p { margin: 0; font-size: 0.95rem; letter-spacing: 1px; color: #ccc; }
     @media screen and (max-width: 768px) {
       nav a { margin: 5px 10px; font-size: 0.85rem; }
       section { padding: 25px 20px; }
@@ -267,9 +133,39 @@
   <a href="https://drive.google.com/file/d/18o8IdtSpkB44dpDWA7LtvDh8fy80RKyA/view?usp=sharing" target="_blank" class="button">Open Video 2</a>
 </section>
 
+<section id="modules">
+  <h2>Evaluation Modules</h2>
+  <ul>
+    <li><strong>Motion Analysis:</strong> Detects movement inconsistencies and unnatural transitions.</li>
+    <li><strong>Audio Sync:</strong> Checks alignment and clarity of sound.</li>
+    <li><strong>Composition Check:</strong> Assesses visual framing and balance.</li>
+    <li><strong>Instruction Compliance:</strong> Confirms prompt adherence.</li>
+  </ul>
+</section>
+
+<section id="image-bursts">
+  <h2>Image Bursts</h2>
+  <p>Image evaluation includes editing and generation tasks, focusing on quality, instruction following, and overall preference.</p>
+  <ul>
+    <li>Review <strong>Defects Document</strong> for common errors.</li>
+    <li>Follow <strong>Image Edit Guidelines</strong> and <strong>Image Generation Guidelines</strong>.</li>
+    <li class="warning">Avoid ties like "About the same" and select "Overall Best" carefully.</li>
+  </ul>
+</section>
+
+<section id="video-bursts">
+  <h2>Video Bursts</h2>
+  <ul>
+    <li>Review <strong>Examples of Audio and Visual Noise</strong>.</li>
+    <li>Follow <strong>Video Edit Guidelines</strong> and <strong>Video Generation Guidelines</strong>.</li>
+    <li>Consult <strong>FAQ</strong> for common questions.</li>
+    <li class="warning">Focus on instruction adherence, motion, audio, and visual quality.</li>
+  </ul>
+</section>
+
 <section id="resume">
   <h2>Resume</h2>
-  <iframe src="https://drive.google.com/file/d/1kvNxCSGXsWik5_sMzrUKhOgxW9Nhqt4/preview"></iframe>
+  <iframe src="https://drive.google.com/file/d/1kvNxCSGXsWik5_sMzrUKhOgxW9Nhqt4i/preview"></iframe>
 </section>
 
 <section id="certificate">
@@ -298,53 +194,42 @@
   let height = canvas.height = window.innerHeight;
   const nodes = [];
   const nodeCount = 80;
-
-  function random(min, max) { return Math.random() * (max - min) + min; }
-
-  for (let i = 0; i < nodeCount; i++) {
-    nodes.push({
-      x: random(0, width),
-      y: random(0, height),
-      vx: random(-0.5, 0.5),
-      vy: random(-0.5, 0.5)
-    });
+  function random(min,max){return Math.random()*(max-min)+min;}
+  for(let i=0;i<nodeCount;i++){
+    nodes.push({x:random(0,width), y:random(0,height), vx:random(-0.5,0.5), vy:random(-0.5,0.5)});
   }
-
-  function animate() {
+  function animate(){
     ctx.clearRect(0,0,width,height);
-    // Draw connections
-    for (let i = 0; i < nodeCount; i++) {
-      for (let j = i + 1; j < nodeCount; j++) {
-        const dx = nodes[i].x - nodes[j].x;
-        const dy = nodes[i].y - nodes[j].y;
-        const dist = Math.sqrt(dx*dx + dy*dy);
-        if (dist < 120) {
-          ctx.strokeStyle = 'rgba(255,107,107,'+(1-dist/120)+')';
-          ctx.lineWidth = 1;
+    for(let i=0;i<nodeCount;i++){
+      for(let j=i+1;j<nodeCount;j++){
+        const dx=nodes[i].x-nodes[j].x;
+        const dy=nodes[i].y-nodes[j].y;
+        const dist=Math.sqrt(dx*dx+dy*dy);
+        if(dist<120){
+          ctx.strokeStyle='rgba(255,107,107,'+(1-dist/120)+')';
+          ctx.lineWidth=1;
           ctx.beginPath();
-          ctx.moveTo(nodes[i].x, nodes[i].y);
-          ctx.lineTo(nodes[j].x, nodes[j].y);
+          ctx.moveTo(nodes[i].x,nodes[i].y);
+          ctx.lineTo(nodes[j].x,nodes[j].y);
           ctx.stroke();
         }
       }
     }
-    // Move nodes
     nodes.forEach(n=>{
-      n.x += n.vx; n.y += n.vy;
+      n.x+=n.vx; n.y+=n.vy;
       if(n.x<0||n.x>width) n.vx*=-1;
       if(n.y<0||n.y>height) n.vy*=-1;
-      ctx.fillStyle = '#ff6b6b';
+      ctx.fillStyle='#ff6b6b';
       ctx.beginPath();
-      ctx.arc(n.x, n.y, 2.5, 0, Math.PI*2);
+      ctx.arc(n.x,n.y,2.5,0,Math.PI*2);
       ctx.fill();
     });
     requestAnimationFrame(animate);
   }
-
   animate();
-  window.addEventListener('resize', ()=>{
-    width = canvas.width = window.innerWidth;
-    height = canvas.height = window.innerHeight;
+  window.addEventListener('resize',()=>{
+    width=canvas.width=window.innerWidth;
+    height=canvas.height=window.innerHeight;
   });
 </script>
 
