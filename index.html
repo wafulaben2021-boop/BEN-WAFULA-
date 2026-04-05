@@ -75,6 +75,17 @@
       border-radius: 2px;
     }
     h3 { font-size: 1.3em; color: #0078d7; margin-top: 25px; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 10px;
+      text-align: left;
+    }
+    th { background: #0078d7; color: white; }
     .comment-card {
       background: #fff;
       border-radius: 10px;
@@ -87,8 +98,6 @@
       transform: translateY(-3px);
       box-shadow: 0 6px 14px rgba(0,0,0,0.1);
     }
-    .comment-card h3 { margin-top: 0; margin-bottom: 12px; color: #0078d7; font-size: 1.2em; }
-    .comment-card p { margin: 8px 0; line-height: 1.5; }
     footer {
       text-align: center;
       padding: 20px;
@@ -127,37 +136,37 @@
 
   <section id="overview" class="overview">
     <h2>Overview</h2>
-    <p>This portfolio showcases a structured, rubric-driven approach to <strong>video evaluation and quality assurance</strong>. It demonstrates operational excellence, efficiency, and consistency across diverse evaluation scenarios. Each entry highlights how modular comment banks and objective rubrics streamline the review process, ensuring evaluations are both precise and reusable.</p>
+    <p>This portfolio shows a structured approach to video evaluation and quality assurance. It focuses on consistency, speed, and clear scoring using rubrics and reusable comments.</p>
   </section>
 
   <section id="purpose" class="purpose">
     <h2>Purpose</h2>
     <ul>
-      <li>Provide a <strong>professional framework</strong> for evaluating video edits against prompts.</li>
-      <li>Document <strong>methodology and workflows</strong> that reduce subjectivity and maximize efficiency.</li>
-      <li>Showcase <strong>case studies</strong> that illustrate practical application of rubrics and modular comments.</li>
+      <li>Provide a clear framework for evaluating video edits</li>
+      <li>Reduce subjectivity through structured scoring</li>
+      <li>Show real evaluation examples</li>
     </ul>
   </section>
 
   <section id="methodology" class="methodology">
     <h2>Methodology</h2>
     <ul>
-      <li><strong>Instruction Following</strong>: Assess whether edits align with the given prompt.</li>
-      <li><strong>Technical Quality</strong>: Evaluate motion smoothness, audio sync, and compositional balance.</li>
-      <li><strong>Independent Scoring</strong>: Each criterion judged separately to maintain objectivity.</li>
-      <li><strong>Overall Preference</strong>: Select the video that best combines instruction adherence and technical quality, excluding outputs with egregious errors.</li>
+      <li>Instruction Following. Check alignment with prompt</li>
+      <li>Technical Quality. Check motion, audio, composition</li>
+      <li>Independent Scoring. Score each criterion separately</li>
+      <li>Overall Selection. Choose best output without major errors</li>
     </ul>
   </section>
 
   <section id="rubric" class="rubric">
     <h2>Rubric Framework</h2>
     <table>
-      <tr><th>Criterion</th><th>Description</th><th>Scale</th><th>Notes</th></tr>
-      <tr><td>Instruction Following</td><td>Accuracy of edit vs. prompt</td><td>1–5</td><td>Clear alignment with request</td></tr>
-      <tr><td>Motion Quality</td><td>Smoothness, realism, anatomical correctness</td><td>1–5</td><td>Spot jitter, unnatural transitions</td></tr>
-      <tr><td>Audio Quality</td><td>Sync, clarity, distortion</td><td>1–5</td><td>Dialogue vs. lip movement</td></tr>
-      <tr><td>Compositional Integrity</td><td>Balance, framing, continuity</td><td>1–5</td><td>Avoid cut-off or misaligned edits</td></tr>
-      <tr><td>Overall Best</td><td>Preferred video to share</td><td>Single choice</td><td>Exclude egregious errors</td></tr>
+      <tr><th>Criterion</th><th>Description</th><th>Scale</th></tr>
+      <tr><td>Instruction Following</td><td>Accuracy vs prompt</td><td>1–5</td></tr>
+      <tr><td>Motion Quality</td><td>Smoothness and realism</td><td>1–5</td></tr>
+      <tr><td>Audio Quality</td><td>Sync and clarity</td><td>1–5</td></tr>
+      <tr><td>Composition</td><td>Framing and balance</td><td>1–5</td></tr>
+      <tr><td>Overall Best</td><td>Final selection</td><td>Single</td></tr>
     </table>
   </section>
 
@@ -165,56 +174,50 @@
     <h2>Modular Comment Bank</h2>
 
     <div class="comment-card">
-      <h3>📋 Instruction Following</h3>
-      <p>The edit successfully matches the prompt, demonstrating clear alignment with the requested action and leaving no ambiguity in execution.</p>
-      <p>In some cases, the requested action is incomplete or misaligned, which reduces the effectiveness of the edit and weakens its adherence to instructions.</p>
+      <h3>Instruction Following</h3>
+      <p>The edit matches the prompt clearly.</p>
+      <p>The edit misses key parts of the prompt.</p>
     </div>
 
     <div class="comment-card">
-      <h3>🎥 Motion Quality</h3>
-      <p>Movement appears fluid and anatomically consistent, creating a natural and believable flow that enhances viewer engagement.</pPerfect — let’s finish the **second half** cleanly so you can paste it right after Section 1 without duplication. This continues from the *Motion Quality* card, closes the Comment Bank, adds Case Studies, and ends with the footer:
-
----
-
-## **Section 2 (Bottom Half: finish Comment Bank → Case Studies → Footer)**
-
-```html
-      <p>Frame transitions occasionally show jitter or abruptness; smoothing these transitions would improve realism and overall motion quality.</p>
+      <h3>Motion Quality</h3>
+      <p>Motion looks smooth and natural.</p>
+      <p>Motion shows jitter or abrupt transitions.</p>
     </div>
 
     <div class="comment-card">
-      <h3>🔊 Audio Quality</h3>
-      <p>Dialogue syncs well with lip movement, ensuring clarity and maintaining immersion for the audience.</p>
-      <p>Background noise or distortion reduces clarity, making it harder to follow the intended audio cues and diminishing technical quality.</p>
+      <h3>Audio Quality</h3>
+      <p>Audio is clear and synced.</p>
+      <p>Audio has noise or sync issues.</p>
     </div>
 
     <div class="comment-card">
-      <h3>🖼️ Compositional Integrity</h3>
-      <p>Framing is balanced and visually coherent, with subjects positioned effectively to maintain continuity and aesthetic appeal.</p>
-      <p>The subject is cropped awkwardly or misaligned, which disrupts visual balance and requires adjustment for better composition.</p>
+      <h3>Composition</h3>
+      <p>Framing looks balanced.</p>
+      <p>Framing looks cropped or misaligned.</p>
     </div>
 
     <div class="comment-card">
-      <h3>⭐ Overall Best</h3>
-      <p>The video follows instructions closely while maintaining strong technical quality, making it the preferred choice for presentation.</p>
-      <p>Although the prompt is aligned, significant defects prevent the video from being selected as the best option.</p>
+      <h3>Overall Best</h3>
+      <p>Best balance of quality and instruction match.</p>
+      <p>Has issues that affect final selection.</p>
     </div>
+
   </section>
 
   <section id="case-studies" class="case-studies">
-    <h2>Case Study Entries</h2>
-    <p>Each evaluation entry includes:</p>
+    <h2>Case Studies</h2>
     <ul>
-      <li><strong>Prompt</strong>: e.g., “Make the character wave.”</li>
-      <li><strong>Video Pair</strong>: Original + two edits.</li>
-      <li><strong>Rubric Scores</strong>: Table with 1–5 ratings.</li>
-      <li><strong>Justifications</strong>: 1–2 sentences per criterion.</li>
-      <li><strong>Overall Best Selection</strong>: With rationale.</li>
+      <li>Prompt</li>
+      <li>Video comparison</li>
+      <li>Scores</li>
+      <li>Justification</li>
+      <li>Final selection</li>
     </ul>
   </section>
 
   <footer>
-    <p>&copy; 2026 BEN WAFULA | Video Evaluation Portfolio</p>
+    <p>© 2026 BEN WAFULA</p>
   </footer>
 
 </body>
