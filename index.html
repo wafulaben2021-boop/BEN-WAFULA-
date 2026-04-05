@@ -5,58 +5,49 @@
   <title>Video Evaluation Portfolio</title>
   <style>
     body {
-      font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      background-color: #f9f9fb;
-      color: #333;
-      line-height: 1.6;
+      font-family: Arial, sans-serif;
+      background: #f9f9fb;
       margin: 0;
-      padding: 0;
     }
 
     header {
-      background: linear-gradient(135deg, #0078d7, #00b4d8);
+      background: #0078d7;
       color: white;
       padding: 20px;
       text-align: center;
-      border-radius: 0 0 12px 12px;
     }
 
     nav {
       background: #005a9e;
-      padding: 12px;
+      padding: 10px;
       text-align: center;
     }
 
     nav a {
       color: white;
-      margin: 0 15px;
+      margin: 0 10px;
       text-decoration: none;
-      font-weight: 600;
+      font-weight: bold;
     }
 
     section {
-      padding: 40px;
-      margin: 20px auto;
+      padding: 30px;
       max-width: 900px;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    }
-
-    h2 {
-      margin-bottom: 20px;
+      margin: 20px auto;
+      background: white;
+      border-radius: 10px;
     }
 
     table {
       width: 100%;
       border-collapse: collapse;
-      margin-top: 20px;
+      margin-top: 15px;
       border: 2px solid #333;
     }
 
     th, td {
       border: 1px solid #333;
       padding: 10px;
-      text-align: left;
     }
 
     th {
@@ -65,23 +56,19 @@
     }
 
     tr:nth-child(even) {
-      background-color: #f2f2f2;
-    }
-
-    .comment-card {
-      background: #fff;
-      border-radius: 10px;
-      padding: 20px;
-      margin-bottom: 20px;
+      background: #f2f2f2;
     }
 
     iframe {
+      width: 100%;
+      height: 400px;
       border-radius: 8px;
+      margin-top: 10px;
     }
 
     footer {
       text-align: center;
-      padding: 20px;
+      padding: 15px;
       background: #0078d7;
       color: white;
     }
@@ -93,32 +80,20 @@
 <header>
   <h1>BEN WAFULA</h1>
   <p>
-    <a href="https://www.linkedin.com/in/ben-wafula-2898ab2a5" target="_blank">LinkedIn</a> |
-    <a href="mailto:wafulaben2021@gmail.com">Email</a>
+    <a href="https://www.linkedin.com/in/ben-wafula-2898ab2a5" target="_blank" style="color:white;">LinkedIn</a> |
+    <a href="mailto:wafulaben2021@gmail.com" style="color:white;">Email</a>
   </p>
 </header>
 
 <nav>
   <a href="#overview">Overview</a>
-  <a href="#methodology">Methodology</a>
   <a href="#rubric">Rubric</a>
-  <a href="#comments">Comments</a>
   <a href="#case-studies">Case Studies</a>
 </nav>
 
 <section id="overview">
   <h2>Overview</h2>
-  <p>This portfolio shows a structured approach to video evaluation using a clear scoring system.</p>
-</section>
-
-<section id="methodology">
-  <h2>Methodology</h2>
-  <ul>
-    <li>Check instruction alignment</li>
-    <li>Evaluate motion, audio, and composition</li>
-    <li>Score each independently</li>
-    <li>Select best output</li>
-  </ul>
+  <p>This portfolio shows how video outputs are evaluated using a structured rubric. Each video is scored independently and compared.</p>
 </section>
 
 <section id="rubric">
@@ -130,18 +105,18 @@
       <th>Scale</th>
     </tr>
     <tr>
-      <td>Instruction Following</td>
-      <td>Accuracy vs prompt</td>
+      <td>Instruction</td>
+      <td>Matches prompt</td>
       <td>1–5</td>
     </tr>
     <tr>
-      <td>Motion Quality</td>
+      <td>Motion</td>
       <td>Smoothness</td>
       <td>1–5</td>
     </tr>
     <tr>
-      <td>Audio Quality</td>
-      <td>Sync and clarity</td>
+      <td>Audio</td>
+      <td>Sync</td>
       <td>1–5</td>
     </tr>
     <tr>
@@ -149,61 +124,55 @@
       <td>Framing</td>
       <td>1–5</td>
     </tr>
-    <tr>
-      <td>Overall</td>
-      <td>Best selection</td>
-      <td>Single</td>
-    </tr>
   </table>
-</section>
-
-<section id="comments">
-  <h2>Comment Bank</h2>
-
-  <div class="comment-card">
-    <h3>Instruction</h3>
-    <p>Matches prompt</p>
-    <p>Misses prompt details</p>
-  </div>
-
-  <div class="comment-card">
-    <h3>Motion</h3>
-    <p>Smooth motion</p>
-    <p>Jitter present</p>
-  </div>
-
 </section>
 
 <section id="case-studies">
   <h2>Case Studies</h2>
 
-  <p>These videos show the type of content evaluated using the rubric.</p>
+  <p>These are real examples of videos evaluated using the rubric above.</p>
 
   <h3>Video 1</h3>
-  <iframe src="https://player.vimeo.com/video/1180209118" width="100%" height="400"></iframe>
+  <iframe 
+    src="https://player.vimeo.com/video/1180209118" 
+    frameborder="0" 
+    allow="autoplay; fullscreen" 
+    allowfullscreen>
+  </iframe>
+
+  <p>
+    <a href="https://vimeo.com/1180209118" target="_blank">Open Video 1</a>
+  </p>
 
   <table>
     <tr><th>Criterion</th><th>Score</th><th>Reason</th></tr>
-    <tr><td>Instruction</td><td>5</td><td>Clear alignment</td></tr>
-    <tr><td>Motion</td><td>4</td><td>Minor jitter</td></tr>
+    <tr><td>Instruction</td><td>5</td><td>Fully matches prompt</td></tr>
+    <tr><td>Motion</td><td>4</td><td>Slight jitter</td></tr>
     <tr><td>Audio</td><td>5</td><td>Clear sync</td></tr>
-    <tr><td>Composition</td><td>4</td><td>Slight framing issue</td></tr>
+    <tr><td>Composition</td><td>4</td><td>Minor framing issue</td></tr>
   </table>
 
   <h3 style="margin-top:30px;">Video 2</h3>
-  <iframe src="https://player.vimeo.com/video/1180209105" width="100%" height="400"></iframe>
+  <iframe 
+    src="https://player.vimeo.com/video/1180209105" 
+    frameborder="0" 
+    allow="autoplay; fullscreen" 
+    allowfullscreen>
+  </iframe>
+
+  <p>
+    <a href="https://vimeo.com/1180209105" target="_blank">Open Video 2</a>
+  </p>
 
   <table>
     <tr><th>Criterion</th><th>Score</th><th>Reason</th></tr>
-    <tr><td>Instruction</td><td>3</td><td>Partial alignment</td></tr>
+    <tr><td>Instruction</td><td>3</td><td>Partial match</td></tr>
     <tr><td>Motion</td><td>3</td><td>Visible jitter</td></tr>
     <tr><td>Audio</td><td>4</td><td>Mostly clear</td></tr>
     <tr><td>Composition</td><td>3</td><td>Framing off</td></tr>
   </table>
 
-  <p style="margin-top:20px;">
-    Video 1 is selected as the better output based on higher consistency across all criteria.
-  </p>
+  <p>Video 1 is the better output based on overall scores.</p>
 
 </section>
 
